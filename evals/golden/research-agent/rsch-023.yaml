@@ -1,0 +1,33 @@
+id: rsch-023
+corpus_version: 1
+category: market
+difficulty: easy
+effort: quick
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: quick
+
+  What's the median golden set size teams are running, per the AIQ report?
+
+expected:
+  must_cite:
+    - https://aiqreport.com/2026/state-of-agent-evals
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '22'
+      why: the reported median, and the report's own comment that it's too small
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search]
+
+notes: >
+  A single-figure lookup on a fact the other AIQ-sourced tasks (rsch-001,
+  rsch-010, rsch-015) never ask about, keeping the report's coverage in the
+  suite from narrowing to just the 62% and 11% headlines.

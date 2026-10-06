@@ -1,0 +1,34 @@
+id: rsch-013
+corpus_version: 1
+category: fact-check
+difficulty: easy
+effort: quick
+targets:
+  - citation-discipline
+
+input: |
+  EFFORT: quick
+
+  Quick check: does EvalTools' Team tier really cost €249 a month?
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '249'
+      why: the figure under verification, confirmed on the official page
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search]
+
+notes: >
+  A true claim, tier-1 sourced, quick effort — the low-stakes floor for the
+  pricing page specifically, since rsch-003 and rsch-020 both lean on it for
+  harder extraction work and need a canary that just confirms the page
+  resolves and the number is read correctly.

@@ -1,0 +1,75 @@
+name: Eval gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: Tests and lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+
+      - name: Run tests
+        run: uv run pytest evals/ -q
+
+      - name: Lint
+        run: uv run ruff check .
+
+  eval-smoke:
+    name: Eval harness smoke test (mockllm)
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+
+      - name: Run eval harness against mockllm
+        # No API key, no spend. This proves the harness is wired correctly —
+        # the golden-task dataset loads, the fixture-corpus tools resolve,
+        # and all three scorer layers run — without ever calling a real
+        # billed model. Accuracy against mockllm/model is meaningless (the
+        # mock model returns no real content) and is not asserted on here.
+        run: uv run inspect eval evals/tasks/research_agent.py --model mockllm/model
+
+  regression-gate:
+    name: Regression gate (committed reports)
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+
+      - name: Compare the PR's newest reports with the base branch
+        # Real-model evals run locally on the Claude subscription and their reports are
+        # committed; CI holds no Claude credentials and never should. So this gate checks
+        # the evidence: no series may drop more than 15 points (CLAUDE.md, decision #2),
+        # and a change under agent/ must come with a new report. See evals/gate.py.
+        run: uv run python -m evals.gate --base origin/${{ github.base_ref }}

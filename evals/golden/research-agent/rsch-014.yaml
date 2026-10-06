@@ -1,0 +1,38 @@
+id: rsch-014
+corpus_version: 1
+category: fact-check
+difficulty: medium
+effort: standard
+targets:
+  - citation-discipline
+
+input: |
+  EFFORT: standard
+
+  A vendor comparison site says EvalTools pricing "starts at just
+  $199/month." Is that accurate?
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '€?\s*0\b|free'
+      why: the official Starter tier is actually free, contradicting the claim
+  must_not_mention: []
+  allow_unsupported_mention:
+    - "EvalTools pricing starts at $199/month"
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 5
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  The $199 figure is the same decoy rsch-003 tests by omission (an agent that
+  never opens the primary source repeats it). This task asks about it
+  directly, which is a different failure mode: an agent that finds and cites
+  the real pricing page but doesn't notice the two numbers disagree, and
+  reports both as if they're compatible.

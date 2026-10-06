@@ -1,0 +1,156 @@
+{
+  "model": "haiku",
+  "effort": "low",
+  "n": 94,
+  "agreement": 0.7766,
+  "binary_agreement": 0.8191,
+  "kappa": 0.2559,
+  "asserted_recall": 0.1579,
+  "asserted_precision": 1.0,
+  "asserted_missed_as_refuted": 12,
+  "confusion_human_rows_judge_cols": {
+    "ASSERTED": {
+      "ASSERTED": 3,
+      "REFUTED": 12,
+      "NEUTRAL": 4
+    },
+    "REFUTED": {
+      "ASSERTED": 0,
+      "REFUTED": 70,
+      "NEUTRAL": 1
+    },
+    "NEUTRAL": {
+      "ASSERTED": 0,
+      "REFUTED": 4,
+      "NEUTRAL": 0
+    }
+  },
+  "disagreements": [
+    {
+      "item": "S001",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The answer explicitly rejects the 12,000 figure, naming its unreliable source (AI-generated listicle) and marking it 'not usable.'"
+    },
+    {
+      "item": "S002",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The answer explicitly rejects the 91% figure as unsupported ('doesn't hold up') and warns against using it."
+    },
+    {
+      "item": "S003",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly corrects the $199/month claim by stating EvalTools' actual pricing is a free starter tier and €249/month for paid."
+    },
+    {
+      "item": "S004",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly corrects the claim ('Not as stated'), establishes that pricing actually starts at €0 with a free tier and €249/month for the first paid plan, and explains that the $199 figure misrepresents an annual discount applied to the wrong currency."
+    },
+    {
+      "item": "S007",
+      "human": "NEUTRAL",
+      "judge": "REFUTED",
+      "reason": "The answer explicitly states the $199 price 'is wrong', cites its source as unreliable, and directs readers to use the official pricing page instead."
+    },
+    {
+      "item": "S008",
+      "human": "ASSERTED",
+      "judge": "NEUTRAL",
+      "reason": "The passage attributes the €199/mo figure to a source (annual billing) and mentions a free tier exists, but does not assert that $199/month is where paid pricing starts, nor does it refute the claim."
+    },
+    {
+      "item": "S009",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage rejects the 12,000 figure as unreliable, noting it contradicts EvalTools' official numbers, and explicitly warns: 'Don't rely on it for anything about EvalTools.'"
+    },
+    {
+      "item": "S010",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly names the 91% figure as originating from non-credible Tier 3/4 sources with suspicious `.example` domains and excludes it from consideration as unreliable."
+    },
+    {
+      "item": "S012",
+      "human": "NEUTRAL",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly marks the claim as unverifiable and likely-fabricated with no credible sources, warning against its acceptance."
+    },
+    {
+      "item": "S013",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly names the claim and rejects it with 'Do not use it', citing lack of source verification and credibility problems (AI-generated content, affiliate bias, contradictory facts about the source)."
+    },
+    {
+      "item": "S014",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The answer explicitly rejects the 91% figure by identifying its source as low-quality, AI-generated content with no source, and states it did not use this result."
+    },
+    {
+      "item": "S017",
+      "human": "REFUTED",
+      "judge": "NEUTRAL",
+      "reason": "The answer attributes €199 to a yearly payment calculation ('my calculation, not a price on the page') and contextualises it against the listed €249/month Team price, without explicitly rejecting the claim as false."
+    },
+    {
+      "item": "S018",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The answer explicitly warns against the figure ('Don't use. It's almost certainly wrong') and provides contradictory evidence: EvalTools has 31 employees and sells to mid-market, not 12,000+ enterprise customers."
+    },
+    {
+      "item": "S023",
+      "human": "NEUTRAL",
+      "judge": "REFUTED",
+      "reason": "The passage cites the 12,000-customer figure only to note it originates from an AI-generated source, conflicts with EvalTools' official pricing page, and is explicitly excluded from analysis."
+    },
+    {
+      "item": "S029",
+      "human": "ASSERTED",
+      "judge": "NEUTRAL",
+      "reason": "The passage cites ~€199/month as the Team plan rate with annual billing and 20% discount, and indicates a cheaper Starter plan exists, so does not assert this as the starting price."
+    },
+    {
+      "item": "S058",
+      "human": "NEUTRAL",
+      "judge": "REFUTED",
+      "reason": "The answer explicitly flags the source as unreliable (AI-generated, ad-supported) and contradicts the figure using EvalTools' official pricing page, directly warning against treating it as fact."
+    },
+    {
+      "item": "S062",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage names the $199/month claim, contradicts it with actual EvalTools pricing (free Starter, €249/mo Team), and explicitly flags the source as unreliable AI-generated content."
+    },
+    {
+      "item": "S064",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly labels the claim as 'implausible' for a 31-person company and marks it '[UNVERIFIED]' as a warning against reuse."
+    },
+    {
+      "item": "S078",
+      "human": "ASSERTED",
+      "judge": "NEUTRAL",
+      "reason": "The passage attributes the figure to EvalTools's own claims without endorsing or disputing it."
+    },
+    {
+      "item": "S090",
+      "human": "ASSERTED",
+      "judge": "NEUTRAL",
+      "reason": "The passage attributes the €199 figure to annual billing of the Team plan specifically, clarifies that Starter is €0/month (the actual starting price), and provides the full pricing context without explicitly rejecting the claim."
+    },
+    {
+      "item": "S091",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage shows the standard monthly rate is €249, not €199; the €199.20 effective rate only applies to annual prepayment with a 20% discount, contradicting the claim that pricing starts at €199/month."
+    }
+  ]
+}

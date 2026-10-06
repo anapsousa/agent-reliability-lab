@@ -1,0 +1,36 @@
+id: rsch-017
+corpus_version: 1
+category: competitor
+difficulty: easy
+effort: standard
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: standard
+
+  Does EvalTools publish their own agent pass rates anywhere, or is that just
+  something they'd claim in a sales call?
+
+expected:
+  must_cite:
+    - https://evaltools.io/about
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'quarterly'
+      why: the specific cadence stated on the about page
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 5
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A credibility-signal question that only the primary source can answer — the
+  claim ("we publish our own agent pass rates quarterly, including the
+  quarters that went backwards") lives in one sentence on the about page and
+  nowhere else in the corpus, so the task fails outright on a search-snippet
+  skim rather than a full fetch.

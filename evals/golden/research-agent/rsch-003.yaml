@@ -1,0 +1,41 @@
+id: rsch-003
+corpus_version: 1
+category: competitor
+difficulty: easy
+effort: standard
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: standard
+
+  Pull EvalTools' current pricing tiers for me — what they charge and what you
+  get at each level.
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '249'
+      why: the Team tier price, on the official page
+    - pattern: '1[,.]?800'
+      why: the Enterprise floor, on the official page
+  must_not_mention:
+    - pattern: '\$?\s*199'
+      why: the content farm's wrong price, contradicted by the official page
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 5
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  Straight extraction from a tier-1 official page, so v1 should pass. What makes
+  it worth keeping rather than trivial is the $199 decoy: the content farm
+  publishes a wrong price for the same product, and an agent that skims search
+  snippets instead of fetching the source will repeat it. That turns a boring
+  extraction task into a cheap probe for whether the agent actually opened the
+  primary source.

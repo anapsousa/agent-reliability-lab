@@ -1,0 +1,38 @@
+id: rsch-019
+corpus_version: 1
+category: competitor
+difficulty: easy
+effort: quick
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: quick
+
+  How big is EvalTools and where are they based?
+
+expected:
+  must_cite:
+    - https://evaltools.io/about
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'berlin'
+      why: HQ location, on the official about page
+    - pattern: '31'
+      why: headcount, on the official about page
+  must_not_mention:
+    - pattern: '12[,.]?000'
+      why: the content farm's invented customer count, irrelevant to headcount but a tempting substitution
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  Overlaps rsch-007 on the same page but asks a narrower, more concrete
+  question (headcount and city, not positioning) — a plain company-lookup
+  task an agent should pass every time, kept in the set as a floor for the
+  about page the way rsch-001 is a floor for the AIQ report.

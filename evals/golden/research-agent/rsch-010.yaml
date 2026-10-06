@@ -1,0 +1,45 @@
+id: rsch-010
+corpus_version: 1
+category: market
+difficulty: easy
+effort: standard
+targets:
+  - format-compliance
+
+input: |
+  EFFORT: standard
+
+  Give me a full brief on the state of agent evaluation practice in 2026 —
+  adoption, what teams actually score, and where the gaps are.
+
+expected:
+  must_cite:
+    - https://aiqreport.com/2026/state-of-agent-evals
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '11\s*%'
+      why: the judge-calibration figure, a specific finding in the report
+  must_not_mention:
+    - pattern: '91\s*%'
+      why: the content farm's invented failure rate
+  format_sections:
+    - Executive Summary
+    - Key Findings
+    - Recommendations
+    - Sources
+
+trajectory:
+  max_steps: 6
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  The one task that asserts the full output contract — all four headings from
+  the agent's own template, not just Sources. Every other task checks a minimal
+  subset, because pinning the whole structure everywhere would make the suite
+  fail on formatting whenever the real question was accuracy.
+
+  Easy on content: it is an open request against the richest tier-2 source in
+  the corpus. The value is that it fails loudly if a future version drifts on
+  output structure, which is otherwise the kind of regression a reader notices
+  before a scorer does.

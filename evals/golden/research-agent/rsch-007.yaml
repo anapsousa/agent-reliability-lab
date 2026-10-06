@@ -1,0 +1,38 @@
+id: rsch-007
+corpus_version: 1
+category: competitor
+difficulty: easy
+effort: standard
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: standard
+
+  Who are EvalTools and how do they position themselves? Short brief.
+
+expected:
+  must_cite:
+    - https://evaltools.io/about
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'berlin'
+      why: on the official about page
+    - pattern: '2024'
+      why: founding year, on the official about page
+  must_not_mention:
+    - pattern: '12[,.]?000'
+      why: the content farm's invented customer count
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  Positioning summary from a tier-1 page. Easy, and kept easy on purpose — a
+  golden set made entirely of traps stops resembling the work the agent actually
+  does, and a pass rate built only from adversarial tasks will not notice the
+  day the agent breaks on something ordinary.

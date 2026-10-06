@@ -1,0 +1,39 @@
+id: rsch-034
+corpus_version: 1
+category: tech-comparison
+difficulty: medium
+effort: standard
+targets:
+  - citation-precision
+
+input: |
+  EFFORT: standard
+
+  Does EvalTools' free Starter tier include LLM-as-judge scoring, or do I
+  need to pay for that?
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '249'
+      why: LLM-as-judge with custom rubrics is a Team-tier feature, not Starter
+    - pattern: 'starter'
+      why: the answer must address the tier actually asked about, not just name Team
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 5
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  Starter's feature list on the pricing page simply doesn't mention
+  LLM-as-judge — the correct answer requires noticing an absence, not
+  extracting a stated fact, which is a different reading skill than every
+  other pricing-page task in the set and the one most likely to trip an
+  agent that pattern-matches "EvalTools + judge" to a true statement without
+  checking which tier it's scoped to.

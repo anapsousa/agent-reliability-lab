@@ -1,0 +1,39 @@
+id: rsch-020
+corpus_version: 1
+category: competitor
+difficulty: easy
+effort: standard
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: standard
+
+  What do I actually get if I move from EvalTools' Starter tier to Team?
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '25[,.]?000'
+      why: Team's monthly eval-run limit, versus Starter's 500
+    - pattern: '249'
+      why: the Team tier price
+  must_not_mention:
+    - pattern: '\$?\s*199'
+      why: the content farm's wrong price for this same upgrade
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 5
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A delta question, not a lookup — it requires reading both tier blocks on
+  the pricing page and reporting what changes, which is a slightly different
+  extraction skill than rsch-003's single-tier read and catches an agent that
+  quotes Team's numbers without noticing what Starter lacked in the first
+  place.

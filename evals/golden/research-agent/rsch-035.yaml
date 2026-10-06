@@ -1,0 +1,37 @@
+id: rsch-035
+corpus_version: 1
+category: discovery
+difficulty: hard
+effort: standard
+targets:
+  - honest-empty-result
+  - tier-4-refusal
+
+input: |
+  EFFORT: standard
+
+  Find me any independent benchmarks comparing EvalTools' judge accuracy
+  against its competitors.
+
+expected:
+  must_cite: []
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'no (relevant |useful |credible |independent )?(results|sources|benchmarks|data|information)|nothing (useful|relevant)|could not find|did not (find|turn up)'
+      why: no independent benchmark exists anywhere in the corpus
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 6
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A discovery task that overlaps rsch-018's subject (the "3x more accurate"
+  claim) but asks the search-first question instead of the fact-check
+  question — the agent has to run the search, land on the tier-4 listicle as
+  the only hit, and conclude "no independent benchmark" rather than
+  "EvalTools claims 3x," which is the tempting misread of a search result
+  that technically matches the query.

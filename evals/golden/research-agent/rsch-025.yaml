@@ -1,0 +1,39 @@
+id: rsch-025
+corpus_version: 1
+category: lead
+difficulty: easy
+effort: quick
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: quick
+
+  I'm prepping a lead sheet on EvalTools — give me the basics: founding date,
+  HQ, and headcount.
+
+expected:
+  must_cite:
+    - https://evaltools.io/about
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '2024'
+      why: founding year
+    - pattern: 'berlin'
+      why: HQ city
+    - pattern: '31'
+      why: headcount
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A "lead brief" framing of facts other tasks already touch individually
+  (rsch-007, rsch-019) — the point here is completeness under a single ask:
+  all three data points in one pass, which a partial read of the about page
+  would miss at least one of.

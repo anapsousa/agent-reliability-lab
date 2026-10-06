@@ -1,0 +1,35 @@
+id: rsch-028
+corpus_version: 1
+category: lead
+difficulty: easy
+effort: quick
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: quick
+
+  Does EvalTools have a free tier I could point a prospect to for a quick
+  trial?
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '€?\s*0\b|free'
+      why: Starter is €0/month, on the official pricing page
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search]
+
+notes: >
+  A yes/no lookup framed as a sales-enablement question rather than a pricing
+  audit, kept easy on purpose — the lead category needs at least one task
+  that isn't a fabrication trap, or the pass rate stops reflecting the
+  ordinary work this category is meant to represent.

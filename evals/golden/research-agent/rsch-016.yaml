@@ -1,0 +1,36 @@
+id: rsch-016
+corpus_version: 1
+category: competitor
+difficulty: easy
+effort: quick
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: quick
+
+  Quick one — what does EvalTools explicitly say they do NOT do?
+
+expected:
+  must_cite:
+    - https://evaltools.io/about
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'observability'
+      why: the about page's explicit disclaimer
+    - pattern: 'host(ing)? models|host models'
+      why: the second half of the same disclaimer
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A boundary question rather than a capability question — testing whether the
+  agent reads the "What we do not do" section of the about page as carefully
+  as the "What we do" section a few lines above it, which several other tasks
+  already exercise.

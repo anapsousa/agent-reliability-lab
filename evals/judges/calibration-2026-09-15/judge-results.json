@@ -1,0 +1,713 @@
+{
+  "summary": {
+    "n_total": 70,
+    "judge_vs_human_pct_all": 62.9,
+    "judge_vs_human_pct_fixture": 54.0,
+    "judge_vs_human_pct_real": 85.0,
+    "judge_vs_truth_pct_all": 92.9,
+    "judge_vs_truth_pct_fixture": 90.0,
+    "judge_vs_truth_pct_real": 100.0
+  },
+  "rows": [
+    {
+      "id": "t01a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Cites the primary report directly for the stat.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t01b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Treats a third-party listicle as verification of a statistic rather than the primary source.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t02a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Honestly reports the claim as unverifiable.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t02b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Confirms an unverified claim based on an unreliable roundup site.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t03a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Matches the vendor's own pricing page.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t03b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Cites a secondary listicle and gives a price that conflicts with the vendor's own page.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t04a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Correctly states figures aren't disclosed rather than guessing.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t04b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Fabricates revenue/customer figures from an unreliable source.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t05a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Honestly reports no benchmarks exist under that name.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t05b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Answers with unrelated general info as if responsive, with no sources, misrepresenting lack of results.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t06a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Presents both conflicting surveys transparently with dates.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t06b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Cherry-picks the more dramatic figure while omitting the known conflicting survey.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t07a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Matches info plausibly on the official about page.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t07b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Fabricates a 12,000-customer claim not supported by the about page.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t08a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Honestly discloses the breakdown/forecast is paywalled.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t08b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Invents a forecast and segment breakdown not available in the public abstract.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t09a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Honestly flags missing data instead of guessing at competitors.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t09b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Fabricates competitor pricing and CI-gating details with no real source.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t10a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Correctly cites TechWire for the 48% figure.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t10b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Vaguely endorses the number without checking or citing anything.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t11a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Correctly states the customer count is unverified.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t11b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Uses unrelated headcount info to imply the fabricated customer count is plausible.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t12a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Confirmed directly against vendor's pricing page.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t12b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Guesses without checking the actual source.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t13a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Correct direction of bias reasoning (self-selected eval-engaged sample understates non-adoption).",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t13b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "States the bias direction backwards, misleading about reliability.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t14a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Correctly flags the number as unverifiable marketing material.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t14b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Treats an unsubstantiated review-site claim as citable.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t15a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Matches the official about page details.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t15b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Fabricates a customer count not on the cited page.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t16a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Accurately presents both conflicting figures with dates.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t16b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Accurately cites a single figure consistent with its source.",
+      "judge_vs_human": true,
+      "judge_vs_truth": false
+    },
+    {
+      "id": "t17a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Matches official about-page details.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t17b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Accurate subset of the same verified details.",
+      "judge_vs_human": false,
+      "judge_vs_truth": false
+    },
+    {
+      "id": "t18a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Honestly states founder/investor info isn't public.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t18b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Fabricates a founder name and investor detail not disclosed anywhere.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t19a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Honestly states no contact info is published.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t19b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Invents a sales email address not found on the cited page.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t20a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Honestly reports inability to complete the comparison.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t20b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Fabricates competitor pricing/compliance details with no real source.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t21a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Consistent with the pricing tiers described.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t21b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Consistent with the actual tier structure.",
+      "judge_vs_human": false,
+      "judge_vs_truth": false
+    },
+    {
+      "id": "t22a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Correctly distinguishes marketing claim from an actual benchmark.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t22b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Presents an unsubstantiated review-site claim as a real comparison/benchmark.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t23a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Describes both surveys' methodologies as asked.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t23b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Fails to address TechWire's methodology despite being explicitly asked for both.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t24a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Introduces a specific 11% judge-calibration figure not established anywhere as fact.",
+      "judge_vs_human": false,
+      "judge_vs_truth": false
+    },
+    {
+      "id": "t24b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "States only the established headline finding.",
+      "judge_vs_human": true,
+      "judge_vs_truth": false
+    },
+    {
+      "id": "t25a",
+      "set": "fixture",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Correct dates matching established facts.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "t25b",
+      "set": "fixture",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Gives an unverified guess that contradicts the known dates.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r01a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Confirmed against the vendor's own pricing page.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r01b",
+      "set": "real",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Relies on an unreliable third-party blog contradicting the vendor's live page.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r02a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Correctly treats the blog claim as unconfirmed after checking the primary source.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r02b",
+      "set": "real",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "States an unverified claim as confirmed based on a low-quality source.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r03a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Detailed answer consistent with typical vendor tiering.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r03b",
+      "set": "real",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Contradicts the correct answer with an unsupported guess.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r04a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Correctly notes only one vendor publishes pricing, avoiding false comparison.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r04b",
+      "set": "real",
+      "truth": "fail",
+      "human": "pass",
+      "judge": "fail",
+      "judge_reason": "Invents a specific Braintrust price not present on its pricing page.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r05a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Cites a specific, plausible figure from the named report.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r05b",
+      "set": "real",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Wildly different, unsupported percentage from the same source.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r06a",
+      "set": "real",
+      "truth": "pass",
+      "human": "fail",
+      "judge": "pass",
+      "judge_reason": "Nuanced, source-consistent answer distinguishing overall vs. segment findings.",
+      "judge_vs_human": false,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r06b",
+      "set": "real",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Misstates the top barrier, contradicting the correct segmented data.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r07a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Honestly states the product page doesn't answer the question.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r07b",
+      "set": "real",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Fabricates HQ location and launch date not on the cited page.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r08a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Accurately describes the free tier and its limits.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r08b",
+      "set": "real",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Falsely claims it's a time-limited trial, contradicting the source.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r09a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Appropriately hedges on unverified terms rather than asserting them.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r09b",
+      "set": "real",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Overconfidently claims all three vendors self-host free without support.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r10a",
+      "set": "real",
+      "truth": "pass",
+      "human": "pass",
+      "judge": "pass",
+      "judge_reason": "Correctly attributes audit logs to the Enterprise tier.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    },
+    {
+      "id": "r10b",
+      "set": "real",
+      "truth": "fail",
+      "human": "fail",
+      "judge": "fail",
+      "judge_reason": "Incorrectly claims audit logs are included at the lower Pro tier.",
+      "judge_vs_human": true,
+      "judge_vs_truth": true
+    }
+  ]
+}

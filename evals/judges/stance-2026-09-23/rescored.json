@@ -1,0 +1,370 @@
+{
+  "strict": {
+    "haiku": {
+      "report": "research-agent-v1-claude-code-haiku-2026-09-23T08-11-54Z.json",
+      "n": 40,
+      "outcome_before": {
+        "passed": 21,
+        "rate": 0.525,
+        "ci95": [
+          0.375,
+          0.6706
+        ]
+      },
+      "outcome_after": {
+        "passed": 22,
+        "rate": 0.55,
+        "ci95": [
+          0.3983,
+          0.6929
+        ]
+      },
+      "all_before": {
+        "passed": 0,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0876
+        ]
+      },
+      "all_after": {
+        "passed": 0,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0876
+        ]
+      },
+      "failing_runs_by_check_before": {
+        "unsupported claim": 7,
+        "cited forbidden source": 4,
+        "mentioned forbidden": 2,
+        "missing section": 9,
+        "missing required citation": 3,
+        "did not mention": 7,
+        "fabricated URL": 1
+      },
+      "failing_runs_by_check_after": {
+        "cited forbidden source": 4,
+        "mentioned forbidden": 2,
+        "unsupported claim": 4,
+        "missing section": 9,
+        "missing required citation": 3,
+        "did not mention": 7,
+        "fabricated URL": 1
+      },
+      "sole_failure_after": {
+        "cited forbidden source": 3,
+        "missing section": 6,
+        "did not mention": 1
+      },
+      "regex_hit_runs": 7
+    },
+    "opus": {
+      "report": "research-agent-v1-claude-code-opus-2026-09-23T08-11-55Z.json",
+      "n": 40,
+      "outcome_before": {
+        "passed": 5,
+        "rate": 0.125,
+        "ci95": [
+          0.0546,
+          0.2611
+        ]
+      },
+      "outcome_after": {
+        "passed": 10,
+        "rate": 0.25,
+        "ci95": [
+          0.1419,
+          0.4019
+        ]
+      },
+      "all_before": {
+        "passed": 4,
+        "rate": 0.1,
+        "ci95": [
+          0.0396,
+          0.2305
+        ]
+      },
+      "all_after": {
+        "passed": 7,
+        "rate": 0.175,
+        "ci95": [
+          0.0875,
+          0.3195
+        ]
+      },
+      "failing_runs_by_check_before": {
+        "unsupported claim": 29,
+        "cited forbidden source": 18,
+        "mentioned forbidden": 6,
+        "missing section": 8,
+        "did not mention": 7,
+        "fabricated URL": 6
+      },
+      "failing_runs_by_check_after": {
+        "cited forbidden source": 18,
+        "unsupported claim": 8,
+        "mentioned forbidden": 6,
+        "missing section": 8,
+        "did not mention": 7,
+        "fabricated URL": 6
+      },
+      "sole_failure_after": {
+        "did not mention": 2,
+        "cited forbidden source": 3,
+        "unsupported claim": 3,
+        "missing section": 4,
+        "fabricated URL": 1
+      },
+      "regex_hit_runs": 29
+    },
+    "sonnet": {
+      "report": "research-agent-v1-claude-code-sonnet-2026-09-23T08-11-53Z.json",
+      "n": 40,
+      "outcome_before": {
+        "passed": 16,
+        "rate": 0.4,
+        "ci95": [
+          0.2635,
+          0.554
+        ]
+      },
+      "outcome_after": {
+        "passed": 16,
+        "rate": 0.4,
+        "ci95": [
+          0.2635,
+          0.554
+        ]
+      },
+      "all_before": {
+        "passed": 8,
+        "rate": 0.2,
+        "ci95": [
+          0.105,
+          0.3476
+        ]
+      },
+      "all_after": {
+        "passed": 8,
+        "rate": 0.2,
+        "ci95": [
+          0.105,
+          0.3476
+        ]
+      },
+      "failing_runs_by_check_before": {
+        "cited forbidden source": 18,
+        "did not mention": 3,
+        "mentioned forbidden": 4,
+        "unsupported claim": 18,
+        "fabricated URL": 4,
+        "missing section": 1,
+        "missing required citation": 1
+      },
+      "failing_runs_by_check_after": {
+        "cited forbidden source": 18,
+        "did not mention": 3,
+        "mentioned forbidden": 4,
+        "unsupported claim": 13,
+        "fabricated URL": 4,
+        "missing section": 1,
+        "missing required citation": 1
+      },
+      "sole_failure_after": {
+        "cited forbidden source": 4,
+        "unsupported claim": 1,
+        "fabricated URL": 2,
+        "missing required citation": 1,
+        "did not mention": 1
+      },
+      "regex_hit_runs": 18
+    }
+  },
+  "lenient": {
+    "haiku": {
+      "report": "research-agent-v1-claude-code-haiku-2026-09-23T08-11-54Z.json",
+      "n": 40,
+      "outcome_before": {
+        "passed": 21,
+        "rate": 0.525,
+        "ci95": [
+          0.375,
+          0.6706
+        ]
+      },
+      "outcome_after": {
+        "passed": 22,
+        "rate": 0.55,
+        "ci95": [
+          0.3983,
+          0.6929
+        ]
+      },
+      "all_before": {
+        "passed": 0,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0876
+        ]
+      },
+      "all_after": {
+        "passed": 0,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0876
+        ]
+      },
+      "failing_runs_by_check_before": {
+        "unsupported claim": 7,
+        "cited forbidden source": 4,
+        "mentioned forbidden": 2,
+        "missing section": 9,
+        "missing required citation": 3,
+        "did not mention": 7,
+        "fabricated URL": 1
+      },
+      "failing_runs_by_check_after": {
+        "cited forbidden source": 4,
+        "mentioned forbidden": 2,
+        "unsupported claim": 4,
+        "missing section": 9,
+        "missing required citation": 3,
+        "did not mention": 7,
+        "fabricated URL": 1
+      },
+      "sole_failure_after": {
+        "cited forbidden source": 3,
+        "missing section": 6,
+        "did not mention": 1
+      },
+      "regex_hit_runs": 7
+    },
+    "opus": {
+      "report": "research-agent-v1-claude-code-opus-2026-09-23T08-11-55Z.json",
+      "n": 40,
+      "outcome_before": {
+        "passed": 5,
+        "rate": 0.125,
+        "ci95": [
+          0.0546,
+          0.2611
+        ]
+      },
+      "outcome_after": {
+        "passed": 11,
+        "rate": 0.275,
+        "ci95": [
+          0.1611,
+          0.4284
+        ]
+      },
+      "all_before": {
+        "passed": 4,
+        "rate": 0.1,
+        "ci95": [
+          0.0396,
+          0.2305
+        ]
+      },
+      "all_after": {
+        "passed": 7,
+        "rate": 0.175,
+        "ci95": [
+          0.0875,
+          0.3195
+        ]
+      },
+      "failing_runs_by_check_before": {
+        "unsupported claim": 29,
+        "cited forbidden source": 18,
+        "mentioned forbidden": 6,
+        "missing section": 8,
+        "did not mention": 7,
+        "fabricated URL": 6
+      },
+      "failing_runs_by_check_after": {
+        "cited forbidden source": 18,
+        "mentioned forbidden": 6,
+        "missing section": 8,
+        "did not mention": 7,
+        "unsupported claim": 3,
+        "fabricated URL": 6
+      },
+      "sole_failure_after": {
+        "cited forbidden source": 5,
+        "did not mention": 2,
+        "unsupported claim": 2,
+        "missing section": 4,
+        "fabricated URL": 1
+      },
+      "regex_hit_runs": 29
+    },
+    "sonnet": {
+      "report": "research-agent-v1-claude-code-sonnet-2026-09-23T08-11-53Z.json",
+      "n": 40,
+      "outcome_before": {
+        "passed": 16,
+        "rate": 0.4,
+        "ci95": [
+          0.2635,
+          0.554
+        ]
+      },
+      "outcome_after": {
+        "passed": 16,
+        "rate": 0.4,
+        "ci95": [
+          0.2635,
+          0.554
+        ]
+      },
+      "all_before": {
+        "passed": 8,
+        "rate": 0.2,
+        "ci95": [
+          0.105,
+          0.3476
+        ]
+      },
+      "all_after": {
+        "passed": 8,
+        "rate": 0.2,
+        "ci95": [
+          0.105,
+          0.3476
+        ]
+      },
+      "failing_runs_by_check_before": {
+        "cited forbidden source": 18,
+        "did not mention": 3,
+        "mentioned forbidden": 4,
+        "unsupported claim": 18,
+        "fabricated URL": 4,
+        "missing section": 1,
+        "missing required citation": 1
+      },
+      "failing_runs_by_check_after": {
+        "cited forbidden source": 18,
+        "did not mention": 3,
+        "mentioned forbidden": 4,
+        "fabricated URL": 4,
+        "missing section": 1,
+        "unsupported claim": 2,
+        "missing required citation": 1
+      },
+      "sole_failure_after": {
+        "cited forbidden source": 10,
+        "unsupported claim": 1,
+        "fabricated URL": 2,
+        "missing required citation": 1,
+        "did not mention": 1
+      },
+      "regex_hit_runs": 18
+    }
+  }
+}

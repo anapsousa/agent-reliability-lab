@@ -1,0 +1,35 @@
+id: rsch-011
+corpus_version: 1
+category: fact-check
+difficulty: easy
+effort: quick
+targets:
+  - citation-discipline
+
+input: |
+  EFFORT: quick
+
+  Someone told me "48% of organisations run no automated agent evaluation."
+  Can you confirm that and tell me where it's from?
+
+expected:
+  must_cite:
+    - https://techwire.example/research/agent-eval-adoption-2026
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '48\s*%'
+      why: the figure under verification
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search]
+
+notes: >
+  The mirror of rsch-001: a genuine, well-supported figure from a different
+  tier-2 source, so the two fact-check floors don't both hinge on the same
+  page. Confirms the agent can locate and cite TechWire on its own, not only
+  AIQ, since several later tasks depend on it being found reliably.

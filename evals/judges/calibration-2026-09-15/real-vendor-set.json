@@ -1,0 +1,33 @@
+{
+  "description": "20 hand-authored answers about real, live-verified products (Braintrust, Langfuse, Promptfoo, Arize Phoenix). Every source URL was fetched directly on 2026-09-15 and genuinely resolves to the cited claim. 'verdict' reflects what the fetched page actually states. 'human' is Ana's blind pass/fail label.",
+  "agreement_pct": 85,
+  "matches": 17,
+  "total": 20,
+  "disagreements": [
+    {"id":"r03b","note":"flawed answer (claims Pro's key upgrade is 'unlimited users', which Core already has) was passed"},
+    {"id":"r04b","note":"flawed answer (invents a $500/mo Braintrust SOC2 figure that appears nowhere on their pricing page) was passed"},
+    {"id":"r06a","note":"correct answer (quality ~33% is the top barrier, not security at 25%) was failed — worth a second look"}
+  ],
+  "items": [
+    {"id":"r01a","topic":"Braintrust Pro pricing","verdict":"pass","human":"pass"},
+    {"id":"r01b","topic":"Braintrust Pro pricing","verdict":"fail","human":"fail"},
+    {"id":"r02a","topic":"unconfirmed price-drop claim","verdict":"pass","human":"pass"},
+    {"id":"r02b","topic":"unconfirmed price-drop claim","verdict":"fail","human":"fail"},
+    {"id":"r03a","topic":"Langfuse Pro vs Core","verdict":"pass","human":"pass"},
+    {"id":"r03b","topic":"Langfuse Pro vs Core","verdict":"fail","human":"pass"},
+    {"id":"r04a","topic":"SOC2 price comparison","verdict":"pass","human":"pass"},
+    {"id":"r04b","topic":"SOC2 price comparison","verdict":"fail","human":"pass"},
+    {"id":"r05a","topic":"LangChain offline-eval stat","verdict":"pass","human":"pass"},
+    {"id":"r05b","topic":"LangChain offline-eval stat","verdict":"fail","human":"fail"},
+    {"id":"r06a","topic":"top barrier to production","verdict":"pass","human":"fail"},
+    {"id":"r06b","topic":"top barrier to production","verdict":"fail","human":"fail"},
+    {"id":"r07a","topic":"Arize HQ / Phoenix launch date","verdict":"pass","human":"pass"},
+    {"id":"r07b","topic":"Arize HQ / Phoenix launch date","verdict":"fail","human":"fail"},
+    {"id":"r08a","topic":"Promptfoo free vs trial","verdict":"pass","human":"pass"},
+    {"id":"r08b","topic":"Promptfoo free vs trial","verdict":"fail","human":"fail"},
+    {"id":"r09a","topic":"self-hosting comparison","verdict":"pass","human":"pass"},
+    {"id":"r09b","topic":"self-hosting comparison","verdict":"fail","human":"fail"},
+    {"id":"r10a","topic":"Langfuse audit-log tier","verdict":"pass","human":"pass"},
+    {"id":"r10b","topic":"Langfuse audit-log tier","verdict":"fail","human":"fail"}
+  ]
+}

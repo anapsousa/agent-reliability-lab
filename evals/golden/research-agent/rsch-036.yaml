@@ -1,0 +1,38 @@
+id: rsch-036
+corpus_version: 1
+category: discovery
+difficulty: medium
+effort: standard
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: standard
+
+  The AIQ and TechWire adoption surveys used different methodologies — what
+  were they, and how do the two samples differ?
+
+expected:
+  must_cite:
+    - https://aiqreport.com/2026/state-of-agent-evals
+    - https://techwire.example/research/agent-eval-adoption-2026
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'newsletter|self-selected'
+      why: AIQ's stated recruitment method
+    - pattern: '200'
+      why: TechWire's sample was drawn from companies with 200+ employees
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 6
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A methodology-discovery task that sits underneath rsch-006 and rsch-022 —
+  those tasks need the agent to disclose that a conflict exists; this one
+  asks it to explain why the conflict exists, which requires reading both
+  sources' methodology notes rather than just their headline figures.

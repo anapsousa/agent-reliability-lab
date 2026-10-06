@@ -1,0 +1,48 @@
+# === Secrets — this repo is public. Nothing below ever gets committed. ===
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+**/credentials*
+**/*_token*
+**/*_secret*
+
+# === Private business context ===
+# Vendored orchestrator context files for the system under test. Real content stays
+# local; only the redacted *.example.md stubs are committed. See CLAUDE.md.
+agent/*/context/*
+!agent/*/context/*.example.md
+!agent/*/context/README.md
+
+# === Python (eval harness) ===
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# === Node / TypeScript (MCP servers) ===
+node_modules/
+dist/
+*.tsbuildinfo
+
+# === Tracing ===
+# Phoenix runs self-hosted; its store is local state, not source.
+traces/data/
+traces/*.db
+phoenix_data/
+
+# === Eval run artefacts ===
+# Committed reports live in evals/reports/. Raw per-run output does not.
+evals/runs/
+logs/
+*.log
+
+# === OS / editor ===
+.DS_Store
+.idea/
+*.swp

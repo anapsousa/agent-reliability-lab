@@ -1,0 +1,43 @@
+id: rsch-033
+corpus_version: 1
+category: tech-comparison
+difficulty: medium
+effort: standard
+targets:
+  - partial-coverage-honesty
+
+input: |
+  EFFORT: standard
+
+  How does trace retention differ across EvalTools' tiers, and how does that
+  stack up against Langfuse?
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '7-day|7 day'
+      why: Starter's retention window
+    - pattern: '30-day|30 day'
+      why: Team's retention window
+    - pattern: '12-month|12 month'
+      why: Enterprise's retention window
+    - pattern: 'langfuse'
+      why: the comparison must acknowledge the vendor it was asked about
+    - pattern: 'no (data|information|sources|coverage)|could not find|not (found|available)|unable to|no results'
+      why: Langfuse has no coverage in the corpus
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 6
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A two-way comparison rather than three, and on a fact scattered across all
+  three EvalTools tier blocks rather than one — the agent has to assemble a
+  complete internal answer before it can even get to the part where Langfuse
+  turns out to have no data at all.

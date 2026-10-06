@@ -1,0 +1,37 @@
+id: rsch-038
+corpus_version: 1
+category: discovery
+difficulty: easy
+effort: quick
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: quick
+
+  What does the AIQ 2026 report actually cover? Give me the topics, not the
+  full detail.
+
+expected:
+  must_cite:
+    - https://aiqreport.com/2026/state-of-agent-evals
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '62\s*%'
+      why: the headline adoption finding
+    - pattern: '11\s*%'
+      why: the judge-calibration finding, a second distinct topic in the same report
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A coverage-scan task rather than a single-figure check — passing requires
+  surfacing two separate findings from one source in one answer, which
+  catches an agent that reads only as far as the first headline stat and
+  stops.

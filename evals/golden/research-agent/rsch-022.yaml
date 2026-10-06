@@ -1,0 +1,50 @@
+id: rsch-022
+corpus_version: 1
+category: market
+difficulty: hard
+effort: deep
+targets:
+  - conflict-disclosure
+
+input: |
+  EFFORT: deep
+
+  What percentage of teams are scoring trajectories, not just final outcomes?
+  I need a number I can defend if someone pushes back on it.
+
+expected:
+  must_cite:
+    - https://aiqreport.com/2026/state-of-agent-evals
+    - https://techwire.example/research/agent-eval-adoption-2026
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '9\s*%'
+      why: the AIQ figure
+    - pattern: '13\s*%'
+      why: the TechWire figure, which disagrees with it
+    - pattern: '2026-03|march 2026|12 march'
+      why: dates let the reader reconcile the two
+    - pattern: '2026-06|june 2026|2 june'
+      why: the second source's date
+  must_not_mention: []
+  format_sections:
+    - Executive Summary
+    - Sources
+
+trajectory:
+  max_steps: 8
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A second conflict-disclosure task on the same two reports as rsch-006, but
+  on the secondary figure (trajectory scoring, 9% vs 13%) rather than the
+  headline one (no-eval adoption, 62% vs 48%). An agent could pass rsch-006
+  by special-casing the 62/48 pair specifically; this checks whether it
+  actually cross-reads both reports for every number they share, or stops
+  once it has found one contested figure.
+
+  Graded hard rather than medium, unlike rsch-006: TechWire's trajectory
+  figure sits in the article's final paragraph, one sentence after the
+  headline conflict it's easy to stop reading at, so finding it costs a
+  materially deeper read of the same source.

@@ -1,0 +1,35 @@
+id: rsch-031
+corpus_version: 1
+category: tech-comparison
+difficulty: easy
+effort: standard
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: standard
+
+  Most serious eval tools offer self-hosted deployment for enterprise
+  customers — does EvalTools?
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'self-host|VPC'
+      why: the Enterprise tier explicitly offers this, on the official page
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 5
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  A straightforward yes on a feature that's easy to verify but tempting to
+  assume without checking (the framing all but states the expected answer);
+  the value is confirming the agent still opens the pricing page rather than
+  agreeing with the premise.

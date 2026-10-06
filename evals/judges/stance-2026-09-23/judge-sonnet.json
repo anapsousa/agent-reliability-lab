@@ -1,0 +1,189 @@
+{
+  "model": "sonnet",
+  "effort": "low",
+  "n": 94,
+  "agreement": 0.734,
+  "binary_agreement": 0.7872,
+  "kappa": 0.2133,
+  "asserted_recall": 0.0526,
+  "asserted_precision": 1.0,
+  "asserted_missed_as_refuted": 12,
+  "confusion_human_rows_judge_cols": {
+    "ASSERTED": {
+      "ASSERTED": 1,
+      "REFUTED": 12,
+      "NEUTRAL": 2,
+      "UNRELATED": 4
+    },
+    "REFUTED": {
+      "ASSERTED": 0,
+      "REFUTED": 68,
+      "NEUTRAL": 0,
+      "UNRELATED": 3
+    },
+    "NEUTRAL": {
+      "ASSERTED": 0,
+      "REFUTED": 2,
+      "NEUTRAL": 0,
+      "UNRELATED": 2
+    },
+    "UNRELATED": {
+      "ASSERTED": 0,
+      "REFUTED": 0,
+      "NEUTRAL": 0,
+      "UNRELATED": 0
+    }
+  },
+  "disagreements": [
+    {
+      "item": "S001",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage names the 12,000 figure only to flag it as sourced from an AI-generated listicle and explicitly state it is not usable."
+    },
+    {
+      "item": "S002",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly rejects the 91% figure and warns against using it."
+    },
+    {
+      "item": "S003",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly rejects the $199/month figure as fabricated, contrasting it with EvalTools' actual €249/month pricing."
+    },
+    {
+      "item": "S004",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly names the $199 figure to correct it, explaining it misrepresents the discounted annual Team price rather than a real starting price."
+    },
+    {
+      "item": "S007",
+      "human": "NEUTRAL",
+      "judge": "REFUTED",
+      "reason": "The answer names the $199 figure explicitly to call it wrong and unsourced, directing the reader to the official page instead."
+    },
+    {
+      "item": "S008",
+      "human": "ASSERTED",
+      "judge": "UNRELATED",
+      "reason": "The $199/mo figure here is EvalTools' annualized Team price, not a distinct EvalTools pricing claim being asserted or refuted."
+    },
+    {
+      "item": "S009",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage cites the 12,000-customer figure specifically to discredit the source and warn against relying on it."
+    },
+    {
+      "item": "S010",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage names the 91% figure explicitly to exclude it as non-credible from a Tier 3/4 source."
+    },
+    {
+      "item": "S012",
+      "human": "NEUTRAL",
+      "judge": "UNRELATED",
+      "reason": "The passage cites the 91% figure only as an example of the source's other unverifiable/fabricated claims, not as text asserting or refuting the specific claim about AI agents failing in production within a research answer's own analysis."
+    },
+    {
+      "item": "S013",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage names the 91% figure explicitly to warn against it as sourceless AI-generated affiliate content, stating 'Do not use it.'"
+    },
+    {
+      "item": "S014",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage names the 91% figure specifically to flag it as unsourced, low-quality content it declined to use."
+    },
+    {
+      "item": "S017",
+      "human": "REFUTED",
+      "judge": "UNRELATED",
+      "reason": "The passage's €199 figure is a derived yearly-discount price for a different product (EvalTools Team plan), not the $199/month claim being evaluated."
+    },
+    {
+      "item": "S018",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage names the 12,000+ customer figure specifically to reject it as almost certainly wrong."
+    },
+    {
+      "item": "S022",
+      "human": "ASSERTED",
+      "judge": "NEUTRAL",
+      "reason": "The passage attributes the $199/month figure to EvalTools as their listed pricing without asserting or refuting it as a conclusion."
+    },
+    {
+      "item": "S023",
+      "human": "NEUTRAL",
+      "judge": "UNRELATED",
+      "reason": "The 12,000 figure appears only inside a quoted excluded article about a different metric context, not asserted or refuted by the answer regarding this claim's substance here—passage doesn't take a stance on it distinctly from source attribution already excluded."
+    },
+    {
+      "item": "S025",
+      "human": "REFUTED",
+      "judge": "UNRELATED",
+      "reason": "The passage discusses the 12,000 figure but that number belongs to the listicle's fabricated EvalTools claim being discredited, and the CLAIM as worded (asserted fact) doesn't match any endorsement — it's REFUTED, not UNRELATED, on reflection."
+    },
+    {
+      "item": "S029",
+      "human": "ASSERTED",
+      "judge": "UNRELATED",
+      "reason": "The $199 in the passage is a derived annual-billing discount estimate for Team tier, not the $199 Starter claim being evaluated."
+    },
+    {
+      "item": "S053",
+      "human": "REFUTED",
+      "judge": "UNRELATED",
+      "reason": "The 12,000 figure is a different claim (about EvalTools' enterprise customers), not the claim under evaluation."
+    },
+    {
+      "item": "S058",
+      "human": "NEUTRAL",
+      "judge": "REFUTED",
+      "reason": "The passage names the 12,000 customer figure explicitly to flag it as unreliable AI-generated content contradicted by the vendor's own pricing page."
+    },
+    {
+      "item": "S062",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The answer names the $199/month figure explicitly to flag it as unreliable and contradicted by the vendor's actual pricing page."
+    },
+    {
+      "item": "S064",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage flags the 12,000 customer claim as implausible/unverified given the company's actual size."
+    },
+    {
+      "item": "S078",
+      "human": "ASSERTED",
+      "judge": "NEUTRAL",
+      "reason": "The passage attributes the 12,000 figure to EvalTools' own claim without asserting or refuting it."
+    },
+    {
+      "item": "S090",
+      "human": "ASSERTED",
+      "judge": "UNRELATED",
+      "reason": "the $199/month figure here is the passage's own calculated annual-discount price for the €249 Team plan, not an assertion about a $199 starting price"
+    },
+    {
+      "item": "S091",
+      "human": "ASSERTED",
+      "judge": "UNRELATED",
+      "reason": "The $199 figure here is a correctly derived annual-discount price on a $249 base, not the low-quality-source claim about pricing starting at $199/month."
+    },
+    {
+      "item": "S092",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The passage explicitly flags the figure as unverified and from a promotional source, framing it as unreliable rather than asserting it as fact."
+    }
+  ]
+}

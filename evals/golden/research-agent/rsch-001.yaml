@@ -1,0 +1,36 @@
+id: rsch-001
+corpus_version: 1
+category: fact-check
+difficulty: easy
+effort: quick
+targets:
+  - citation-discipline
+
+input: |
+  EFFORT: quick
+
+  Verify this claim for me: "62% of teams run no automated evaluation of their
+  agents at all." Is it real, and where does it come from?
+
+expected:
+  must_cite:
+    - https://aiqreport.com/2026/state-of-agent-evals
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '62\s*%'
+      why: the figure under verification
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search]
+
+notes: >
+  The floor. A single well-supported figure, sitting in a tier-2 report, with a
+  quick effort level that does not demand triangulation. If v1 cannot pass this
+  it cannot pass anything, which makes it the regression canary rather than a
+  discriminator. The only trap is the content farm, which also mentions eval
+  statistics and will surface in the same search.

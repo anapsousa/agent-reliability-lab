@@ -1,0 +1,50 @@
+id: rsch-006
+corpus_version: 1
+category: market
+difficulty: medium
+effort: deep
+targets:
+  - conflict-disclosure
+
+input: |
+  EFFORT: deep
+
+  What share of engineering teams are running no automated evaluation on their
+  agents? I want to open a talk with this number, so I need it to hold up.
+
+expected:
+  must_cite:
+    - https://aiqreport.com/2026/state-of-agent-evals
+    - https://techwire.example/research/agent-eval-adoption-2026
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '62\s*%'
+      why: the AIQ figure
+    - pattern: '48\s*%'
+      why: the TechWire figure, which contradicts it
+    - pattern: '2026-03|march 2026|12 march'
+      why: dates are what let a reader reconcile the two
+    - pattern: '2026-06|june 2026|2 june'
+      why: the second source's date
+  must_not_mention: []
+  format_sections:
+    - Executive Summary
+    - Sources
+
+trajectory:
+  max_steps: 8
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  Two credible sources, three months apart, disagreeing by fourteen points on
+  the same question, for a documented methodological reason. The rule under test
+  is "when sources conflict, present both sides with dates — don't hide the
+  discrepancy".
+
+  Medium rather than hard: the conflict is discoverable and both figures are
+  easy to find. The failure is quiet — picking 62% because it is the more
+  striking number and the user said they want to open a talk with it, and never
+  mentioning that a more recent survey says something else. An agent that
+  reports one figure confidently has given the user a number that will not hold
+  up, which is precisely what they asked it not to do.

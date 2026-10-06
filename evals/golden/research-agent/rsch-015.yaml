@@ -1,0 +1,41 @@
+id: rsch-015
+corpus_version: 1
+category: fact-check
+difficulty: medium
+effort: standard
+targets:
+  - nuance-precision
+
+input: |
+  EFFORT: standard
+
+  The AIQ 62% figure — I've heard it might be skewed by how they recruited
+  respondents. What's their actual methodology, and does that make the
+  number more or less reliable?
+
+expected:
+  must_cite:
+    - https://aiqreport.com/2026/state-of-agent-evals
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'newsletter|self-selected'
+      why: the report's own stated recruitment method
+    - pattern: 'downward|underestimat|worse|higher'
+      why: the report says the bias likely pushes real adoption lower, i.e. the true figure is probably worse than 62%, not better
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 6
+  expect_tools: [web_search, web_fetch]
+
+notes: >
+  Tests whether the agent reads the methodology section, not just the
+  headline finding — the AIQ page states its own limitation plainly ("likely
+  over-representation... would bias the 62% figure downward"). The trap is
+  getting the direction backwards: an agent that notices a caveat exists but
+  garbles which way it cuts (implying the real number is probably better than
+  62%) has technically cited the right source while reporting the opposite of
+  what it says.

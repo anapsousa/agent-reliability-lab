@@ -1,0 +1,34 @@
+id: rsch-040
+corpus_version: 1
+category: discovery
+difficulty: easy
+effort: quick
+targets:
+  - citation-discipline
+
+input: |
+  EFFORT: quick
+
+  Between the AIQ and TechWire adoption surveys, which is more recent, and
+  exactly when was it published?
+
+expected:
+  must_cite:
+    - https://techwire.example/research/agent-eval-adoption-2026
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: '2026-06-02|june\s*2,?\s*2026|2\s*june\s*2026'
+      why: TechWire, the more recent of the two, was published 2 June 2026
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search]
+
+notes: >
+  A small date-comparison task that only needs one citation to pass, kept
+  easy and quick as a fast discovery-category canary distinct from the
+  heavier methodology and conflict tasks that share the same two sources.

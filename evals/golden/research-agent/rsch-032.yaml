@@ -1,0 +1,35 @@
+id: rsch-032
+corpus_version: 1
+category: tech-comparison
+difficulty: easy
+effort: quick
+targets:
+  - sourced-extraction
+
+input: |
+  EFFORT: quick
+
+  Does EvalTools integrate into a CI pipeline, or is it a separate manual
+  step?
+
+expected:
+  must_cite:
+    - https://evaltools.io/pricing
+  must_not_cite:
+    - https://top-ai-tools-daily.example/best-agent-eval-platforms-2026
+  must_mention:
+    - pattern: 'ci integration|ci pipeline|continuous integration'
+      why: "\"All plans include CI integration\" is stated plainly on the pricing page"
+  must_not_mention: []
+  format_sections:
+    - Sources
+
+trajectory:
+  max_steps: 4
+  expect_tools: [web_search]
+
+notes: >
+  A single-line fact at the bottom of the pricing page, easy to miss if an
+  agent stops reading after the three tier blocks — kept in the set as a
+  floor for whether the agent reads a source to its end, not just its
+  structured highlights.
