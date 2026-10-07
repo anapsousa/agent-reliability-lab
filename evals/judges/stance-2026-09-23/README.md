@@ -78,17 +78,20 @@ unknown items or stances; `calibrate` uses it, so re-running
 `uv run python -m evals.judges.stance calibrate --model sonnet` re-scores the judge
 against the adjudicated labels (zero-tool `claude -p` on the subscription, no billed API).
 
-## Round 2 result (2026-10-06): adjudicated, and the bar is missed
+## Round 2 result (2026-10-07): adjudicated, and the bar is missed
 
-`adjudicated.json` is committed. Final labels over the 94 passages: 85 REFUTED, 9
-ASSERTED (round 1: 71 / 19 / 4). Of the 25 re-labelled items, 11 ASSERTED became REFUTED
-(the key slip), 4 NEUTRAL became REFUTED and 1 REFUTED became ASSERTED.
+`adjudicated.json` is committed. Final labels over the 94 passages: 86 REFUTED, 8
+ASSERTED (round 1: 71 / 19 / 4). Of the 25 re-labelled items, 12 ASSERTED became REFUTED
+(11 from the key slip, S010 on a repeat pass on 7 Oct), 4 NEUTRAL became REFUTED and 1
+REFUTED became ASSERTED. The 6 Oct version (S010 still ASSERTED) is kept as
+`adjudicated.round2-06oct.json`.
 
-The sonnet judge against the adjudicated labels (`judge-sonnet-adjudicated.json`,
-from the local verdict cache, no new run): agreement 87%, pass/fail agreement 94%,
-kappa 0.39, **ASSERTED recall 1 of 9 (11%)**, precision 1 of 1. The bar was "at least
-90%": missed. Five of the nine ASSERTED passages are called UNRELATED (the annual-billing
-arithmetic), two NEUTRAL, one REFUTED. The judge is not used for scoring and the regex
+The sonnet judge against the adjudicated labels (`judge-sonnet-adjudicated.json`, fresh
+run on 7 Oct): agreement 90%, pass/fail agreement 93%, kappa 0.50, **ASSERTED recall 2
+of 8 (25%)**, precision 2 of 2. The bar was "at least 90%": missed. Five of the six
+missed ASSERTED passages are called UNRELATED (the annual-billing arithmetic), one
+NEUTRAL. The 6 Oct scoring of the same judge (`judge-sonnet-adjudicated-06oct-cached.json`,
+recall 1 of 9) differs by one verdict per cell, so the judge is unstable as well. The judge is not used for scoring and the regex
 cascade stays opt-in. Full numbers, the re-scored ranking and the limits are in
 `evals/reports/stance-rescore-2026-10-06.md`. `rescored.json` holds the re-scoring output
 (`uv run python -m evals.rescore --json`).

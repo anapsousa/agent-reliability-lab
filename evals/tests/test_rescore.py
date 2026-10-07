@@ -7,9 +7,9 @@ from evals.rescore import label_stance, labels_by_passage, rescore_all
 
 
 def test_committed_labels_after_adjudication():
-    # Round 1 was 71 REFUTED / 19 ASSERTED / 4 NEUTRAL. The adjudication moved 11 slips
+    # Round 1 was 71 REFUTED / 19 ASSERTED / 4 NEUTRAL. The adjudication moved 12 slips
     # and 4 NEUTRALs to REFUTED and one REFUTED to ASSERTED.
-    assert Counter(load_labels().values()) == {"REFUTED": 85, "ASSERTED": 9}
+    assert Counter(load_labels().values()) == {"REFUTED": 86, "ASSERTED": 8}
 
 
 def test_every_labelled_passage_has_one_stance():

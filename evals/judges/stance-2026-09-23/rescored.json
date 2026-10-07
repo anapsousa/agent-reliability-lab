@@ -45,9 +45,9 @@
         "fabricated URL": 1
       },
       "failing_runs_by_check_after": {
+        "unsupported claim": 4,
         "cited forbidden source": 4,
         "mentioned forbidden": 2,
-        "unsupported claim": 4,
         "missing section": 9,
         "missing required citation": 3,
         "did not mention": 7,
@@ -104,8 +104,8 @@
         "fabricated URL": 6
       },
       "failing_runs_by_check_after": {
-        "cited forbidden source": 18,
         "unsupported claim": 8,
+        "cited forbidden source": 18,
         "mentioned forbidden": 6,
         "missing section": 8,
         "did not mention": 7,
@@ -132,11 +132,11 @@
         ]
       },
       "outcome_after": {
-        "passed": 16,
-        "rate": 0.4,
+        "passed": 17,
+        "rate": 0.425,
         "ci95": [
-          0.2635,
-          0.554
+          0.2851,
+          0.5781
         ]
       },
       "all_before": {
@@ -158,8 +158,8 @@
       "failing_runs_by_check_before": {
         "cited forbidden source": 18,
         "did not mention": 3,
-        "mentioned forbidden": 4,
         "unsupported claim": 18,
+        "mentioned forbidden": 4,
         "fabricated URL": 4,
         "missing section": 1,
         "missing required citation": 1
@@ -167,15 +167,14 @@
       "failing_runs_by_check_after": {
         "cited forbidden source": 18,
         "did not mention": 3,
+        "unsupported claim": 12,
         "mentioned forbidden": 4,
-        "unsupported claim": 13,
         "fabricated URL": 4,
         "missing section": 1,
         "missing required citation": 1
       },
       "sole_failure_after": {
         "cited forbidden source": 4,
-        "unsupported claim": 1,
         "fabricated URL": 2,
         "missing required citation": 1,
         "did not mention": 1
@@ -229,9 +228,9 @@
         "fabricated URL": 1
       },
       "failing_runs_by_check_after": {
+        "unsupported claim": 4,
         "cited forbidden source": 4,
         "mentioned forbidden": 2,
-        "unsupported claim": 4,
         "missing section": 9,
         "missing required citation": 3,
         "did not mention": 7,
@@ -316,11 +315,11 @@
         ]
       },
       "outcome_after": {
-        "passed": 16,
-        "rate": 0.4,
+        "passed": 17,
+        "rate": 0.425,
         "ci95": [
-          0.2635,
-          0.554
+          0.2851,
+          0.5781
         ]
       },
       "all_before": {
@@ -342,8 +341,8 @@
       "failing_runs_by_check_before": {
         "cited forbidden source": 18,
         "did not mention": 3,
-        "mentioned forbidden": 4,
         "unsupported claim": 18,
+        "mentioned forbidden": 4,
         "fabricated URL": 4,
         "missing section": 1,
         "missing required citation": 1
@@ -353,13 +352,12 @@
         "did not mention": 3,
         "mentioned forbidden": 4,
         "fabricated URL": 4,
+        "unsupported claim": 1,
         "missing section": 1,
-        "unsupported claim": 2,
         "missing required citation": 1
       },
       "sole_failure_after": {
         "cited forbidden source": 10,
-        "unsupported claim": 1,
         "fabricated URL": 2,
         "missing required citation": 1,
         "did not mention": 1

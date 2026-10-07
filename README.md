@@ -35,15 +35,16 @@ What I did about it:
    my labels. It agrees on 70 of 71 refutations and misses most assertions (asserted
    recall 16% for haiku, 5% for sonnet). **It is not calibrated and is not used for
    scoring.**
-3. Read the disagreements. Eleven of my 19 "asserted" labels were plain debunkings,
-   all within the first 18 items: a key slip on my side, not the judge's. Four more
+3. Read the disagreements. Twelve of my 19 "asserted" labels were plain debunkings
+   (eleven within the first 18 items, the twelfth found on a repeat pass): a key slip on my side, not the judge's. Four more
    were correct arithmetic (EUR 249 less 20% is about EUR 199) that matched the regex,
    which is why a fourth label, UNRELATED, now exists.
 4. Put the 25 contested items into a blind adjudication page and re-labelled them.
-   11 of the 19 asserted labels became refuted, 4 neutrals became refuted, 1 refuted
-   became asserted. Final: 85 refuted, 9 asserted.
+   12 of the 19 asserted labels became refuted, 4 neutrals became refuted, 1 refuted
+   became asserted. Final: 86 refuted, 8 asserted.
 5. Scored the judge against those labels, against a bar I wrote down first: the judge
-   replaces the regex only if asserted recall reaches 90%. **It missed: 1 of 9, 11%.**
+   replaces the regex only if asserted recall reaches 90%. **It missed: 2 of 8, 25%** (11% on an earlier run of the same
+   judge, so it is unstable as well as wrong).
    Most of the misses are the EUR 199 annual-billing arithmetic, which the judge calls
    unrelated. The regex stays, the judge is not used.
 6. Re-scored the stored transcripts with the human labels in place of the automatic
@@ -77,8 +78,8 @@ Read these before citing any number here.
   -5 points, tighter than the instrument can resolve, and now fails at -15. It is a
   policy line, not a significance test: it catches a large regression and misses smaller
   ones. Repeated runs (k >= 3) are the way to tighten it.
-- **The stance judge failed its pre-registered bar** (asserted recall 11%, bar 90%) and
-  is not used for scoring. The labels behind that number are one annotator's, with 9
+- **The stance judge failed its pre-registered bar** (asserted recall 25%, bar 90%) and
+  is not used for scoring. The labels behind that number are one annotator's, with 8
   positives.
 - **One agent, one domain.** A research agent against a frozen fixture web. Nothing here
   generalises to other agents or to the live web.

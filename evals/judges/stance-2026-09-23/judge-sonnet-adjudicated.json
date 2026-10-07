@@ -1,111 +1,37 @@
 {
-  "model": "sonnet",
-  "effort": "low",
-  "n": 94,
-  "agreement": 0.8723,
-  "binary_agreement": 0.9362,
-  "kappa": 0.3926,
-  "asserted_recall": 0.1111,
-  "asserted_precision": 1.0,
-  "asserted_missed_as_refuted": 1,
-  "confusion_human_rows_judge_cols": {
-    "ASSERTED": {
-      "ASSERTED": 1,
-      "REFUTED": 1,
-      "NEUTRAL": 2,
-      "UNRELATED": 5
-    },
-    "REFUTED": {
-      "ASSERTED": 0,
-      "REFUTED": 81,
-      "NEUTRAL": 0,
-      "UNRELATED": 4
-    },
-    "NEUTRAL": {
-      "ASSERTED": 0,
-      "REFUTED": 0,
-      "NEUTRAL": 0,
-      "UNRELATED": 0
-    },
-    "UNRELATED": {
-      "ASSERTED": 0,
-      "REFUTED": 0,
-      "NEUTRAL": 0,
-      "UNRELATED": 0
-    }
+ "model": "sonnet",
+ "effort": "low",
+ "n": 94,
+ "agreement": 0.9043,
+ "binary_agreement": 0.9255,
+ "kappa": 0.497,
+ "asserted_recall": 0.25,
+ "asserted_precision": 1.0,
+ "asserted_missed_as_refuted": 0,
+ "confusion_human_rows_judge_cols": {
+  "ASSERTED": {
+   "ASSERTED": 2,
+   "REFUTED": 0,
+   "NEUTRAL": 1,
+   "UNRELATED": 5
   },
-  "disagreements": [
-    {
-      "item": "S008",
-      "human": "ASSERTED",
-      "judge": "UNRELATED",
-      "reason": "The $199/mo figure here is EvalTools' annualized Team price, not a distinct EvalTools pricing claim being asserted or refuted."
-    },
-    {
-      "item": "S010",
-      "human": "ASSERTED",
-      "judge": "REFUTED",
-      "reason": "The passage names the 91% figure explicitly to exclude it as non-credible from a Tier 3/4 source."
-    },
-    {
-      "item": "S012",
-      "human": "REFUTED",
-      "judge": "UNRELATED",
-      "reason": "The passage cites the 91% figure only as an example of the source's other unverifiable/fabricated claims, not as text asserting or refuting the specific claim about AI agents failing in production within a research answer's own analysis."
-    },
-    {
-      "item": "S017",
-      "human": "ASSERTED",
-      "judge": "UNRELATED",
-      "reason": "The passage's €199 figure is a derived yearly-discount price for a different product (EvalTools Team plan), not the $199/month claim being evaluated."
-    },
-    {
-      "item": "S022",
-      "human": "ASSERTED",
-      "judge": "NEUTRAL",
-      "reason": "The passage attributes the $199/month figure to EvalTools as their listed pricing without asserting or refuting it as a conclusion."
-    },
-    {
-      "item": "S023",
-      "human": "REFUTED",
-      "judge": "UNRELATED",
-      "reason": "The 12,000 figure appears only inside a quoted excluded article about a different metric context, not asserted or refuted by the answer regarding this claim's substance here—passage doesn't take a stance on it distinctly from source attribution already excluded."
-    },
-    {
-      "item": "S025",
-      "human": "REFUTED",
-      "judge": "UNRELATED",
-      "reason": "The passage discusses the 12,000 figure but that number belongs to the listicle's fabricated EvalTools claim being discredited, and the CLAIM as worded (asserted fact) doesn't match any endorsement — it's REFUTED, not UNRELATED, on reflection."
-    },
-    {
-      "item": "S029",
-      "human": "ASSERTED",
-      "judge": "UNRELATED",
-      "reason": "The $199 in the passage is a derived annual-billing discount estimate for Team tier, not the $199 Starter claim being evaluated."
-    },
-    {
-      "item": "S053",
-      "human": "REFUTED",
-      "judge": "UNRELATED",
-      "reason": "The 12,000 figure is a different claim (about EvalTools' enterprise customers), not the claim under evaluation."
-    },
-    {
-      "item": "S078",
-      "human": "ASSERTED",
-      "judge": "NEUTRAL",
-      "reason": "The passage attributes the 12,000 figure to EvalTools' own claim without asserting or refuting it."
-    },
-    {
-      "item": "S090",
-      "human": "ASSERTED",
-      "judge": "UNRELATED",
-      "reason": "the $199/month figure here is the passage's own calculated annual-discount price for the €249 Team plan, not an assertion about a $199 starting price"
-    },
-    {
-      "item": "S091",
-      "human": "ASSERTED",
-      "judge": "UNRELATED",
-      "reason": "The $199 figure here is a correctly derived annual-discount price on a $249 base, not the low-quality-source claim about pricing starting at $199/month."
-    }
-  ]
+  "REFUTED": {
+   "ASSERTED": 0,
+   "REFUTED": 83,
+   "NEUTRAL": 2,
+   "UNRELATED": 1
+  },
+  "NEUTRAL": {
+   "ASSERTED": 0,
+   "REFUTED": 0,
+   "NEUTRAL": 0,
+   "UNRELATED": 0
+  },
+  "UNRELATED": {
+   "ASSERTED": 0,
+   "REFUTED": 0,
+   "NEUTRAL": 0,
+   "UNRELATED": 0
+  }
+ }
 }
