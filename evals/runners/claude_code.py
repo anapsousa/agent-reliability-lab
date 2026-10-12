@@ -39,6 +39,7 @@ from evals.judges.run_llm_judge import JUDGE_DISALLOWED_TOOLS
 from evals.scorers.components import evaluate_components
 from evals.scorers.outcome import evaluate_outcome
 from evals.scorers.steps import Step
+from evals.scorers.trace import evaluate_trace
 from evals.scorers.trajectory import evaluate_trajectory
 from evals.tasks.research_agent import agent_system_prompt, load_golden
 
@@ -210,6 +211,39 @@ def score(spec: dict, trace: Trace, ground_truth: dict) -> dict:
     }
 
 
+def trace_score(spec: dict, trace: Trace) -> dict:
+    """Trace-level scores (evals/scorers/trace.py). Kept out of `score()` on purpose:
+    `scores` feeds the all-layers rate and the CI gate, and this layer is not calibrated."""
+    return evaluate_trace(
+        trace.steps,
+        trace.answer,
+        spec["expected"],
+        spec.get("trajectory") or {},
+        effort=spec.get("effort", "standard"),
+        task_input=spec["input"].strip(),
+        stop=trace.stop,
+    ).as_dict()
+
+
+def trace_summary(rows: list[dict]) -> dict:
+    """Per-check pass rate over the runs where the check applies, plus mean step score."""
+    out: dict = {}
+    scored = [r["trace_scores"] for r in rows if r.get("trace_scores")]
+    for check in ("tool_choice", "stopping", "grounding"):
+        applies = [t[check] for t in scored if t[check]["passed"] is not None]
+        passes = sum(c["passed"] for c in applies)
+        scores = [c["score"] for c in applies if c["score"] is not None]
+        out[check] = {
+            "n": len(applies),
+            "passed": passes,
+            "rate": round(passes / len(applies), 4) if applies else None,
+            "ci95": wilson(passes, len(applies)),
+            "mean_score": round(sum(scores) / len(scores), 4) if scores else None,
+        }
+    out["note"] = "trace layer: not gated, not in all_layers; see evals/scorers/trace.py"
+    return out
+
+
 def wilson(passes: int, n: int, z: float = 1.96) -> tuple[float, float]:
     """95% Wilson interval. On 40 tasks it is roughly ±15 points — say so next to the rate."""
     if n == 0:
@@ -256,6 +290,8 @@ def summarise(rows: list[dict]) -> dict:
         "p95": percentile(wall, 95),
         "max": max(wall) if wall else None,
     }
+    if any(r.get("trace_scores") for r in rows):
+        summary["trace"] = trace_summary(rows)
     summary["stops"] = {
         s: sum(r["stop"] == s for r in rows) for s in sorted({r["stop"] for r in rows})
     }
@@ -322,6 +358,7 @@ def run_task(
         ],
         "answer": redact(trace.answer),
         "scores": score(spec, trace, ground_truth),
+        "trace_scores": trace_score(spec, trace),
     }
 
 
@@ -417,6 +454,10 @@ def main(argv: list[str] | None = None) -> Path:
         f"  cost ${s['cost_usd']['total']} API-equiv   p95 {s['latency_s']['p95']}s   {s['stops']}"
     )
     print(f"  report: {out.relative_to(REPO)}")
+    print(
+        f"  transcripts: {run_dir.relative_to(REPO)} (gitignored, holds private context; "
+        "keep them: python -m evals.keep_runs --dest <dir outside the repo>)"
+    )
     return out
 
 

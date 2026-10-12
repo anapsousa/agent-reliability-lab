@@ -30,3 +30,9 @@ The reports below stay as they were. The stance judge was calibrated against adj
 human labels and missed its bar, so it is not used; the stored transcripts were re-scored
 with the human labels instead. See `stance-rescore-2026-10-06.md`: opus moves from 12% to
 25-28% on outcome, and the ranking is still not separable at n = 40.
+
+## Trace-level scores (2026-10-08, not gated)
+
+The same stored runs, scored step by step on tool choice, stopping and grounding,
+separately from the outcome. See `trace-scores-2026-10-08.md`. Uncalibrated: read it as
+a diagnostic, not a ranking.

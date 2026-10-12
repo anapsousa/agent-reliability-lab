@@ -33,6 +33,7 @@ from evals.fixtures.tools import (
 from evals.scorers.components import evaluate_components
 from evals.scorers.outcome import evaluate_outcome
 from evals.scorers.steps import steps_from_messages
+from evals.scorers.trace import evaluate_trace
 from evals.scorers.trajectory import evaluate_trajectory
 
 REPO = Path(__file__).resolve().parents[2]
@@ -233,6 +234,35 @@ def components():
     return score
 
 
+@scorer(metrics=[accuracy(), stderr()])
+def trace():
+    """Per-step trace scoring: tool choice, stopping, grounding. See evals/scorers/trace.py.
+
+    Reported as its own metric. CORRECT only when every applicable trace check passes;
+    the three checks and the per-step verdicts are in the score metadata.
+    """
+
+    async def score(state: TaskState, target: Target) -> Score:
+        result = evaluate_trace(
+            steps_from_messages(state.messages),
+            state.output.completion or "",
+            state.metadata["expected"],
+            state.metadata.get("trajectory") or {},
+            effort=state.metadata["effort"],
+            task_input=state.input_text,
+        )
+        checks = (result.tool_choice, result.stopping, result.grounding)
+        failures = [f for c in checks for f in c.failures]
+        passed = all(c.passed is not False for c in checks)
+        return Score(
+            value=CORRECT if passed else INCORRECT,
+            explanation="all trace checks passed" if passed else "; ".join(failures),
+            metadata={**result.as_dict(), "category": state.metadata["category"]},
+        )
+
+    return score
+
+
 # --------------------------------------------------------------------------- #
 # Task
 # --------------------------------------------------------------------------- #
@@ -263,7 +293,7 @@ def research_agent(version: str = "v1", message_limit: int = 25) -> Task:
             use_tools(read_context(version), web_search(corpus), web_fetch(corpus)),
             generate(),
         ],
-        scorer=[outcome(corpus.ground_truth), trajectory(), components()],
+        scorer=[outcome(corpus.ground_truth), trajectory(), components(), trace()],
         message_limit=message_limit,
         metadata={
             "agent_version": version,

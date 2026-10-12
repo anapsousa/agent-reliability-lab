@@ -30,7 +30,7 @@ flagged 94 passages in 57 of the 120 runs, and 53 of the passages were opus.
 What I did about it:
 
 1. Labelled all 94 flagged passages blind, by hand: 71 refuted, 19 asserted, 4 neutral.
-   So the regex called 94 assertions and I found 19 (9 after adjudication, below).
+   So the regex called 94 assertions and I found 19 (8 after adjudication, below).
 2. Built an LLM stance judge (zero tools, one passage per call) and scored it against
    my labels. It agrees on 70 of 71 refutations and misses most assertions (asserted
    recall 16% for haiku, 5% for sonnet). **It is not calibrated and is not used for
@@ -81,6 +81,14 @@ Read these before citing any number here.
 - **The stance judge failed its pre-registered bar** (asserted recall 25%, bar 90%) and
   is not used for scoring. The labels behind that number are one annotator's, with 8
   positives.
+- **One annotator.** Every stance label, and the bar the judge is held to, come from the
+  same person, and round 1 had eleven key slips. A second annotator has not yet labelled
+  the 9 positives (the 8 current ones plus S010, moved on 7 Oct). Until they do, the
+  positives are not ground truth, and nothing that depends on them gates CI. Scaffolding
+  for the blind second pass: `evals/judges/stance-2026-09-23/annotator-2/`.
+- **The trace layer is uncalibrated.** Its stopping slack and grounding rule are policy
+  choices with no hand labels behind them, and most of its grounding failures are correct
+  arithmetic, not fabrication. It is reported, not gated.
 - **One agent, one domain.** A research agent against a frozen fixture web. Nothing here
   generalises to other agents or to the live web.
 - **Cost is API-equivalent.** Runs go through Claude Code on a subscription, so the
@@ -96,6 +104,12 @@ Three scorer layers, because "did it work" is three questions:
    must-mention, no fabricated URLs, no unsupported claims).
 2. **Trajectory**: was the path sane (no loops, no abandoned branches).
 3. **Component**: tool-call correctness and step count within budget.
+
+A fourth, diagnostic layer scores the **trace** step by step, separately from all three:
+did it pick the right tool at each step, did it stop once it had its sources, and does the
+final text match what the tools returned. It is reported per check and never folded into
+the pass rates or the gate. Latest pass on the baseline runs:
+`evals/reports/trace-scores-2026-10-12.md` (the first pass, 8 Oct, is superseded).
 
 Every run reports pass rate, cost and p95 latency together, and sample size with
 every result.
@@ -116,7 +130,7 @@ in `PINS.md`.
 | `agent/` | Systems under test, pinned by version |
 | `evals/golden/` | 40 task definitions, with fabricated-URL and unpassable-check guards |
 | `evals/fixtures/` | The frozen fictional web (invented vendors on `.example` domains) |
-| `evals/scorers/` | Outcome, trajectory and component scorers, with unit tests |
+| `evals/scorers/` | Outcome, trajectory, component and trace scorers, with unit tests |
 | `evals/judges/` | LLM judges, human labels, calibration reports, the adjudication page |
 | `evals/runners/` | The Claude Code runner |
 | `evals/reports/` | Committed baseline reports, one JSON per run |
