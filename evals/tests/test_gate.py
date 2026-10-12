@@ -58,3 +58,37 @@ def test_only_the_newest_report_in_a_series_counts():
         "r-sonnet-2026-09-25T08-00-00Z.json": _report("sonnet", 0.72, 0.82),
     }
     assert compare(BASE, head, agent_changed=True) == []
+
+
+def test_a_new_model_under_the_same_alias_is_a_new_series_not_a_regression():
+    base = {
+        "r-haiku-2026-09-23T08-00-00Z.json": {
+            **_report("haiku", 0.52, 0.52),
+            "models_seen": ["claude-haiku-4-5"],
+        }
+    }
+    head = {
+        **base,
+        "r-haiku-2026-10-12T08-00-00Z.json": {
+            **_report("haiku", 0.20, 0.20),
+            "models_seen": ["claude-haiku-5-5"],
+        },
+    }
+    assert compare(base, head, agent_changed=True) == []
+
+
+def test_the_same_model_under_the_same_alias_is_still_compared():
+    base = {
+        "r-haiku-2026-09-23T08-00-00Z.json": {
+            **_report("haiku", 0.52, 0.52),
+            "models_seen": ["claude-haiku-5-5"],
+        }
+    }
+    head = {
+        **base,
+        "r-haiku-2026-10-12T08-00-00Z.json": {
+            **_report("haiku", 0.20, 0.20),
+            "models_seen": ["claude-haiku-5-5"],
+        },
+    }
+    assert len(compare(base, head, agent_changed=True)) == 2

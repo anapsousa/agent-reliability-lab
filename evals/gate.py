@@ -43,8 +43,20 @@ def _git(*args: str) -> str:
     ).stdout
 
 
-def series_key(report: dict) -> tuple[str, str, str]:
-    return (report["agent"], report.get("harness", "inspect"), report.get("model_alias", "?"))
+def series_key(report: dict) -> tuple[str, str, str, str]:
+    """Agent, harness, alias, and the model(s) the alias actually resolved to.
+
+    The alias is not a version: `--model haiku` ran claude-haiku-4-5 on 2026-09-23 and
+    claude-haiku-5-5 on 2026-10-12. Keyed on the alias alone, a model change reads as an
+    agent regression (or improvement). With the resolved model in the key, a report from a
+    new model starts a new series, which has no baseline and is not compared.
+    """
+    return (
+        report["agent"],
+        report.get("harness", "inspect"),
+        report.get("model_alias", "?"),
+        "+".join(sorted(report.get("models_seen") or [])) or "?",
+    )
 
 
 def newest_by_series(reports: dict[str, dict]) -> dict[tuple, tuple[str, dict]]:
