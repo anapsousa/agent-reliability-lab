@@ -28,8 +28,8 @@ committed so the comparison is reproducible.
 
 ## Protocol
 
-1. Confirm the bar in `evals/judges/annotator2.py` (`BAR_POSITIVE_AGREEMENT`,
-   `BAR_KAPPA`) **before** opening any second label. Proposed: at least 8 of 9 positives
+1. The bar is fixed in `evals/judges/annotator2.py` (`BAR_POSITIVE_AGREEMENT`,
+   `BAR_KAPPA`), confirmed 2026-10-08 before any second label exists: at least 8 of 9 positives
    agree on the pass/fail split the scorer uses, and Cohen's kappa >= 0.6 over the 27.
 2. Send the annotator `label.html` only (it embeds the items). Brief them with the label
    definitions inside it, nothing else: not the judge's verdicts, not the first labels,
@@ -48,6 +48,6 @@ committed so the comparison is reproducible.
   measurement against one person's reading, and the label definitions need tightening
   before anything else changes.
 
-Either way, 9 positives is too few to calibrate a recall bar of 90% (one miss is 11
+Either way, 8 positives is too few to calibrate a recall bar of 90% (one miss is 12.5
 points). More positives are the real fix; this check only says whether the ones we have
 can be trusted.

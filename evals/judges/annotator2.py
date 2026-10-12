@@ -29,8 +29,8 @@ OUT_DIR = CAL_DIR / "annotator-2"
 SEED = 20261008
 DECOYS_PER_POSITIVE = 2
 
-# Pre-registered before any second label exists. PROPOSED, not yet confirmed by the
-# owner: change these before the second annotator's labels are opened, never after.
+# Pre-registered on 2026-10-08, confirmed by the owner before any second label exists.
+# Never change these after the second annotator's labels have been opened.
 BAR_POSITIVE_AGREEMENT = 8  # of the 9 positives, on the pass/fail split the scorer uses
 BAR_KAPPA = 0.6  # Cohen's kappa over the whole blind set, four stances
 
