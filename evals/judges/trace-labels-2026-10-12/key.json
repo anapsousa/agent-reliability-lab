@@ -1,0 +1,152 @@
+[
+ {
+  "item": "T-01",
+  "model": "opus",
+  "task": "rsch-036"
+ },
+ {
+  "item": "T-02",
+  "model": "sonnet",
+  "task": "rsch-040"
+ },
+ {
+  "item": "T-03",
+  "model": "sonnet",
+  "task": "rsch-010"
+ },
+ {
+  "item": "T-04",
+  "model": "opus",
+  "task": "rsch-034"
+ },
+ {
+  "item": "T-05",
+  "model": "sonnet",
+  "task": "rsch-028"
+ },
+ {
+  "item": "T-06",
+  "model": "sonnet",
+  "task": "rsch-033"
+ },
+ {
+  "item": "T-07",
+  "model": "opus",
+  "task": "rsch-017"
+ },
+ {
+  "item": "T-08",
+  "model": "sonnet",
+  "task": "rsch-036"
+ },
+ {
+  "item": "T-09",
+  "model": "opus",
+  "task": "rsch-030"
+ },
+ {
+  "item": "T-10",
+  "model": "haiku",
+  "task": "rsch-003"
+ },
+ {
+  "item": "T-11",
+  "model": "haiku",
+  "task": "rsch-025"
+ },
+ {
+  "item": "T-12",
+  "model": "opus",
+  "task": "rsch-006"
+ },
+ {
+  "item": "T-13",
+  "model": "haiku",
+  "task": "rsch-005"
+ },
+ {
+  "item": "T-14",
+  "model": "opus",
+  "task": "rsch-014"
+ },
+ {
+  "item": "T-15",
+  "model": "haiku",
+  "task": "rsch-018"
+ },
+ {
+  "item": "T-16",
+  "model": "opus",
+  "task": "rsch-013"
+ },
+ {
+  "item": "T-17",
+  "model": "haiku",
+  "task": "rsch-039"
+ },
+ {
+  "item": "T-18",
+  "model": "opus",
+  "task": "rsch-008"
+ },
+ {
+  "item": "T-19",
+  "model": "haiku",
+  "task": "rsch-024"
+ },
+ {
+  "item": "T-20",
+  "model": "haiku",
+  "task": "rsch-001"
+ },
+ {
+  "item": "T-21",
+  "model": "sonnet",
+  "task": "rsch-007"
+ },
+ {
+  "item": "T-22",
+  "model": "haiku",
+  "task": "rsch-012"
+ },
+ {
+  "item": "T-23",
+  "model": "opus",
+  "task": "rsch-028"
+ },
+ {
+  "item": "T-24",
+  "model": "sonnet",
+  "task": "rsch-004"
+ },
+ {
+  "item": "T-25",
+  "model": "sonnet",
+  "task": "rsch-020"
+ },
+ {
+  "item": "T-26",
+  "model": "sonnet",
+  "task": "rsch-006"
+ },
+ {
+  "item": "T-27",
+  "model": "opus",
+  "task": "rsch-005"
+ },
+ {
+  "item": "T-28",
+  "model": "sonnet",
+  "task": "rsch-016"
+ },
+ {
+  "item": "T-29",
+  "model": "haiku",
+  "task": "rsch-008"
+ },
+ {
+  "item": "T-30",
+  "model": "haiku",
+  "task": "rsch-029"
+ }
+]
