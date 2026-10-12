@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stance labelling, annotator 2</title>
+<style>
+  :root { --bg:#fafafa; --fg:#1a1a1a; --muted:#5c5c5c; --card:#fff; --line:#d8d8d8; --accent:#1f5fbf; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#151515; --fg:#eaeaea; --muted:#a8a8a8; --card:#1f1f1f; --line:#3a3a3a; --accent:#7fb0ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.25rem; margin: 0 0 4px; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px; margin:16px 0; }
+  .claim { font-weight:600; }
+  pre { white-space: pre-wrap; word-wrap: break-word; font: inherit; margin: 8px 0 0; }
+  .opts { display:grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap:8px; }
+  button { font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--fg); cursor:pointer; text-align:left; }
+  button[aria-pressed="true"] { border-color: var(--accent); outline: 2px solid var(--accent); }
+  button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .nav { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+  dt { font-weight:600; } dd { margin:0 0 8px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Stance labelling, annotator 2</h1>
+  <p class="muted">Blind set. Do not open the rest of the repository until you have exported.
+    Keys: 1-4 label and advance, arrows move, E exports. Progress is kept in this browser.</p>
+
+  <details class="card"><summary>Label definitions</summary>
+    <dl>
+      <dt>1 ASSERTED</dt><dd>The answer presents the figure as fact, or relies on it for a conclusion or recommendation, even with a vague caveat elsewhere.</dd>
+      <dt>2 REFUTED</dt><dd>The answer names the figure in order to reject, correct or warn against it.</dd>
+      <dt>3 NEUTRAL</dt><dd>The answer attributes the figure to its source and gives no verdict either way.</dd>
+      <dt>4 UNRELATED</dt><dd>The matching number is not this claim at all, e.g. a correctly derived figure that shares the digits.</dd>
+    </dl>
+    <p class="muted">You are not judging whether the claim is true, only what the answer does with it.</p>
+  </details>
+
+  <div class="card" aria-live="polite">
+    <div class="muted" id="pos"></div>
+    <p class="claim" id="claim"></p>
+    <pre id="passage"></pre>
+  </div>
+
+  <div class="opts" role="group" aria-label="Stance">
+    <button data-s="ASSERTED">1 ASSERTED</button>
+    <button data-s="REFUTED">2 REFUTED</button>
+    <button data-s="NEUTRAL">3 NEUTRAL</button>
+    <button data-s="UNRELATED">4 UNRELATED</button>
+  </div>
+  <div class="nav">
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <button id="export">Export labels.json</button>
+  </div>
+  <p class="muted" id="status"></p>
+</main>
+<script>
+const ITEMS = /*ITEMS*/[];
+const STORE = "ral-annotator2-labels";
+let labels = {};
+try { labels = JSON.parse(localStorage.getItem(STORE) || "{}"); } catch (e) { labels = {}; }
+let i = 0;
+const $ = (id) => document.getElementById(id);
+const buttons = [...document.querySelectorAll("[data-s]")];
+
+function save() { try { localStorage.setItem(STORE, JSON.stringify(labels)); } catch (e) {} }
+function render() {
+  const it = ITEMS[i];
+  $("pos").textContent = `${it.item} · ${i + 1} of ${ITEMS.length}`;
+  $("claim").textContent = "Claim: " + it.claim;
+  $("passage").textContent = it.passage;
+  buttons.forEach(b => b.setAttribute("aria-pressed", String(labels[it.item] === b.dataset.s)));
+  const done = ITEMS.filter(x => labels[x.item]).length;
+  $("status").textContent = `${done} of ${ITEMS.length} labelled`;
+}
+function label(s) { labels[ITEMS[i].item] = s; save(); if (i < ITEMS.length - 1) i++; render(); }
+function exportLabels() {
+  const missing = ITEMS.filter(x => !labels[x.item]).map(x => x.item);
+  if (missing.length && !confirm(`${missing.length} unlabelled (${missing.join(", ")}). Export anyway?`)) return;
+  const out = {}; ITEMS.forEach(x => { if (labels[x.item]) out[x.item] = labels[x.item]; });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 1) + "\n"], {type: "application/json"}));
+  a.download = "labels.json"; a.click();
+}
+buttons.forEach(b => b.addEventListener("click", () => label(b.dataset.s)));
+$("prev").onclick = () => { if (i > 0) i--; render(); };
+$("next").onclick = () => { if (i < ITEMS.length - 1) i++; render(); };
+$("export").onclick = exportLabels;
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+  const map = {"1": "ASSERTED", "2": "REFUTED", "3": "NEUTRAL", "4": "UNRELATED"};
+  if (map[e.key]) label(map[e.key]);
+  else if (e.key === "ArrowLeft") $("prev").click();
+  else if (e.key === "ArrowRight") $("next").click();
+  else if (e.key === "e" || e.key === "E") exportLabels();
+});
+render();
+</script>
+</body>
+</html>

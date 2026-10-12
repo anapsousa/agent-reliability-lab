@@ -95,3 +95,8 @@ recall 1 of 9) differs by one verdict per cell, so the judge is unstable as well
 cascade stays opt-in. Full numbers, the re-scored ranking and the limits are in
 `evals/reports/stance-rescore-2026-10-06.md`. `rescored.json` holds the re-scoring output
 (`uv run python -m evals.rescore --json`).
+
+## Next: second annotator (scaffolded 2026-10-08)
+
+All labels above are one annotator's. Before the positives are treated as ground truth, a
+second person labels them blind, mixed with decoys: see `annotator-2/README.md`.
