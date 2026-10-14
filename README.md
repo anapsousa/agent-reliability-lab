@@ -110,6 +110,7 @@ did it pick the right tool at each step, did it stop once it had its sources, an
 final text match what the tools returned. It is reported per check and never folded into
 the pass rates or the gate. Latest pass on the baseline runs:
 `evals/reports/trace-scores-2026-10-12.md` (the first pass, 8 Oct, is superseded).
+Repeat runs, `evals/reports/passk-2026-10-12.md`: how many tasks pass every time, not once.
 
 Every run reports pass rate, cost and p95 latency together, and sample size with
 every result.
