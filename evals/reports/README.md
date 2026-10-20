@@ -31,8 +31,17 @@ human labels and missed its bar, so it is not used; the stored transcripts were 
 with the human labels instead. See `stance-rescore-2026-10-06.md`: opus moves from 12% to
 25-28% on outcome, and the ranking is still not separable at n = 40.
 
+The forbidden-source check had the same flaw. `forbidden-source-rescore-2026-10-20.md`
+re-scores all stored runs with a support-only rule (opt-in, heuristic): with the stance
+labels as well, opus reaches 32-38% on outcome.
+
 ## Trace-level scores (2026-10-08, not gated)
 
 The same stored runs, scored step by step on tool choice, stopping and grounding,
 separately from the outcome. See `trace-scores-2026-10-08.md`. Uncalibrated: read it as
 a diagnostic, not a ranking.
+
+## Trace checks against hand labels (2026-10-20)
+
+30 blind traces, one annotator: none of the three trace checks meets its bar. See
+`trace-agreement-2026-10-20.md`.

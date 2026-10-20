@@ -7,7 +7,11 @@ whether a claim was asserted or merely quoted belongs to the judge layer.
 
 import pytest
 
-from evals.scorers.outcome import evaluate_outcome
+from evals.scorers.outcome import (
+    evaluate_outcome,
+    forbidden_source_mentions,
+    forbidden_source_stance,
+)
 
 GROUND_TRUTH = {
     "valid_urls": [
@@ -235,3 +239,110 @@ def test_a_regex_hit_that_is_not_the_claim_passes():
     assert evaluate_outcome(
         DEBUNK, expected(), GROUND_TRUTH, stance=lambda c, p: "UNRELATED"
     ).passed
+
+
+# --------------------------------------------------------------------------- #
+# Forbidden sources: cited, or named in order to reject?
+# --------------------------------------------------------------------------- #
+
+FORBIDDEN = "https://top-ai-tools-daily.example/best-agent-eval-platforms-2026"
+OTHER = "https://evaltools.io/pricing"
+
+
+def _forbidden(answer, source_use=forbidden_source_stance):
+    return evaluate_outcome(
+        answer, expected(must_not_cite=[FORBIDDEN]), GROUND_TRUTH, source_use=source_use
+    )
+
+
+def test_without_source_use_the_check_stays_lexical():
+    # Historical numbers must not move: the default is the old substring rule.
+    answer = f"## Sources\n- Excluded: {FORBIDDEN} (AI-generated, unsourced)\n"
+    assert _forbidden(answer, source_use=None).failures == [f"cited forbidden source: {FORBIDDEN}"]
+
+
+def test_a_bare_citation_counts_as_cited():
+    answer = f"## Sources\n- {OTHER}\n- {FORBIDDEN} (published 2026-07-28)\n"
+    assert forbidden_source_stance(answer, FORBIDDEN) == "ASSERTED"
+    assert _forbidden(answer).failures == [f"cited forbidden source: {FORBIDDEN}"]
+
+
+def test_according_to_x_is_support():
+    answer = f"According to [Top AI Tools Daily]({FORBIDDEN}), 91% of agents fail in production.\n"
+    assert forbidden_source_stance(answer, FORBIDDEN) == "ASSERTED"
+    assert not _forbidden(answer).passed
+
+
+def test_support_wins_over_a_rejection_cue_in_the_same_line():
+    # Conservative: a line that both relies on the source and hedges it is a citation.
+    answer = f"- Used for the failure-rate figure only, flagged as unreliable: {FORBIDDEN}\n"
+    assert forbidden_source_stance(answer, FORBIDDEN) == "ASSERTED"
+
+
+def test_an_explicit_rejection_is_not_a_citation():
+    answer = (
+        "## Key Findings\n"
+        f"- I did not use {FORBIDDEN} because it is AI-generated and cites no source.\n"
+    )
+    assert forbidden_source_stance(answer, FORBIDDEN) == "REFUTED"
+    assert _forbidden(answer).passed
+
+
+def test_a_url_inside_a_quoted_list_of_excluded_sources_is_not_a_citation():
+    also = "https://aiqreport.com/2026/state-of-agent-evals"
+    inline = f'Sources not used: "{FORBIDDEN}", "{also}".\n'
+    listed = f'## Sources\n- {OTHER}\n\n**Excluded sources:**\n- "{FORBIDDEN}"\n- "{also}"\n'
+    assert forbidden_source_stance(inline, FORBIDDEN) == "REFUTED"
+    assert forbidden_source_stance(listed, FORBIDDEN) == "REFUTED"
+    assert _forbidden(listed).passed
+
+
+def test_one_supporting_mention_is_enough_to_count_as_cited():
+    answer = f"- 91% of agents fail ({FORBIDDEN}).\n\n## Sources\n- Excluded: {FORBIDDEN}\n"
+    stances = [m.stance for m in forbidden_source_mentions(answer, FORBIDDEN)]
+    assert stances == ["ASSERTED", "REFUTED"]
+    assert forbidden_source_stance(answer, FORBIDDEN) == "ASSERTED"
+
+
+@pytest.mark.parametrize(
+    "line",
+    [
+        f"- {FORBIDDEN} (AI-generated, affiliate content)",  # description, no verdict
+        f"- {FORBIDDEN} [UNVERIFIED]",  # a flag is not a rejection
+        f"- A listicle claims 91% of agents fail ({FORBIDDEN}).",  # attribution only
+        f"- I did not exclude {FORBIDDEN}; its numbers hold up.",  # negated rejection cue
+    ],
+)
+def test_a_mention_with_no_explicit_rejection_counts_as_cited(line):
+    assert forbidden_source_stance(f"## Sources\n{line}\n", FORBIDDEN) == "ASSERTED"
+
+
+def test_negated_support_is_a_rejection():
+    answer = f"- {FORBIDDEN}: origin of the claim, not cited for any figure and not relied on.\n"
+    assert forbidden_source_stance(answer, FORBIDDEN) == "REFUTED"
+
+
+def test_emphasis_does_not_hide_a_cue():
+    answer = f"- The figure is unsourced, so I am **not** citing it. ({FORBIDDEN})\n"
+    assert forbidden_source_stance(answer, FORBIDDEN) == "REFUTED"
+
+
+def test_a_label_governs_its_list_but_not_a_later_list_under_prose():
+    answer = (
+        "**Sources I excluded:**\n"
+        f"- {FORBIDDEN}\n\n"
+        "These are the sources I relied on, below.\n"
+        f"- {FORBIDDEN}\n"
+    )
+    labels = [(m.label, m.stance) for m in forbidden_source_mentions(answer, FORBIDDEN)]
+    assert labels == [("**Sources I excluded:**", "REFUTED"), ("", "ASSERTED")]
+
+
+def test_a_parent_bullet_is_the_label_of_its_children():
+    answer = f"- **Not usable as sources:**\n  - {FORBIDDEN}\n- Kept: {OTHER}\n"
+    assert forbidden_source_stance(answer, FORBIDDEN) == "REFUTED"
+
+
+def test_a_url_that_only_shares_a_prefix_is_not_a_mention():
+    answer = f"- {FORBIDDEN}-archive (a different page)\n"
+    assert forbidden_source_mentions(answer, FORBIDDEN) == []
