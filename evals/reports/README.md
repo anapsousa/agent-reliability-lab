@@ -34,6 +34,8 @@ with the human labels instead. See `stance-rescore-2026-10-06.md`: opus moves fr
 The forbidden-source check had the same flaw. `forbidden-source-rescore-2026-10-20.md`
 re-scores all stored runs with a support-only rule (opt-in, heuristic): with the stance
 labels as well, opus reaches 32-38% on outcome.
+A second, blind reading of all 203 mentions (`forbidden-source-second-reader-2026-10-21.md`)
+finds no mention the rule passes wrongly. Every disagreement has the rule stricter.
 
 ## Trace-level scores (2026-10-08, not gated)
 

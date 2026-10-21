@@ -164,6 +164,8 @@ opus and 24/40 sonnet. The repeats do not move. All layers do not move.
   after the heuristic had run, so the reading is not blind to its verdicts. No human has
   checked it yet. The owner, or a second annotator, should read at least the 36 kept
   mentions and a sample of the 167 passed ones before anything here is gated on.
+  A second, blind reading by the assistant (2026-10-21) agrees on every pass and finds
+  the heuristic stricter, never looser: [`forbidden-source-second-reader-2026-10-21.md`](forbidden-source-second-reader-2026-10-21.md).
 - **Opt-in.** The live runner still scores `must_not_cite` lexically, so new reports stay
   comparable within their series and with `evals.rescore`. Switching the default is a
   separate decision with a new series.

@@ -46,6 +46,23 @@ def test_the_bar_no_mention_read_as_anything_but_a_rejection_is_passed():
     assert passed_wrongly == []
 
 
+SECOND_READER = READER.with_name("second-reader.json")
+
+
+def test_the_bar_holds_under_the_second_reading_too():
+    # The second reading (2026-10-21) was blind to the heuristic's verdicts. It reads more
+    # context, so it may pass more than the heuristic does; the heuristic must never pass a
+    # mention it did not read as a rejection.
+    second = json.loads(SECOND_READER.read_text(encoding="utf-8"))["labels"]
+    mentions = dict(_stored_mentions())
+    assert set(mentions) == set(second), "every stored mention is read exactly once"
+    assert Counter(second.values()) == {"REJECT": 185, "UNMARKED": 14, "SUPPORT": 2, "OTHER": 2}
+    passed_wrongly = [
+        k for k, m in mentions.items() if m.stance == "REFUTED" and second[k] != "REJECT"
+    ]
+    assert passed_wrongly == []
+
+
 def test_reader_counts_are_the_committed_ones():
     assert Counter(load_reader().values()) == {
         "rejection": 167,

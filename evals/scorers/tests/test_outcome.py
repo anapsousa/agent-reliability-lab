@@ -317,6 +317,23 @@ def test_a_mention_with_no_explicit_rejection_counts_as_cited(line):
     assert forbidden_source_stance(f"## Sources\n{line}\n", FORBIDDEN) == "ASSERTED"
 
 
+def test_no_negates_a_rejection_cue_in_its_clause():
+    # Found by the second reader (2026-10-21): "no" was not a negator, so "no reason to
+    # exclude" read as an exclusion and passed a mention that keeps the source.
+    answer = f"- There is no reason to exclude {FORBIDDEN}; its pricing matches the vendor's.\n"
+    assert forbidden_source_stance(answer, FORBIDDEN) == "ASSERTED"
+
+
+def test_no_negates_a_support_cue_in_its_clause():
+    # The stored case: "cited for" here is the listicle citing nothing, not the answer
+    # citing the listicle. Still cited (no rejection), but not for that reason.
+    answer = (
+        f"- Single source: AI article, no underlying source cited for this number ({FORBIDDEN})\n"
+    )
+    (mention,) = forbidden_source_mentions(answer, FORBIDDEN)
+    assert (mention.stance, mention.cue) == ("ASSERTED", "")
+
+
 def test_negated_support_is_a_rejection():
     answer = f"- {FORBIDDEN}: origin of the claim, not cited for any figure and not relied on.\n"
     assert forbidden_source_stance(answer, FORBIDDEN) == "REFUTED"

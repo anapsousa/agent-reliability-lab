@@ -103,7 +103,9 @@ def _compile(pattern: str, where: str) -> re.Pattern[str]:
 # behaviour. The cue lists were written after reading those mentions, so the bar is a
 # consistency check on them, not a validation (evals/tests/test_source_rescore.py).
 
-_NEG = re.compile(r"\b(?:not|never|cannot)\b|n't\b", re.IGNORECASE)
+# "no" added 2026-10-21 after the second reading: without it "no reason to exclude X" read
+# as an exclusion (a false pass). It changes no verdict on the 203 stored mentions.
+_NEG = re.compile(r"\b(?:not|never|cannot|no)\b|n't\b", re.IGNORECASE)
 # Clause boundaries for negation scope: "Excluded, not cited for any claim" negates
 # "cited for" but not "Excluded".
 _CLAUSE = re.compile(r"[.;:!?()\[\]\u2014\u2013,]")
