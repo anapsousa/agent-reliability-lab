@@ -68,9 +68,10 @@ Details in `evals/judges/calibration-2026-09-15/report.md`.
 
 Read these before citing any number here.
 
-- **One run per task.** This is called a reliability lab and has no repeated-trial data
-  yet: no pass^k, no run-to-run variance. That is the largest hole and the next thing
-  to fill.
+- **The headline table is one run per task.** Repeated runs exist only for haiku-5-5 and
+  sonnet-5-5, k = 3, from 12 Oct (`evals/reports/passk-2026-10-12.md`). Those are not the
+  baseline's models, opus was not repeated, and three runs give a lower bound on the
+  spread, not the spread.
 - **The headline outcome ranking in the table above is wrong, and the corrected one is
   not clean either.** The reports are kept as they were. The re-scored numbers are in
   `evals/reports/stance-rescore-2026-10-06.md`; the models are not separable at n = 40.
@@ -153,7 +154,7 @@ uv run inspect eval evals/tasks/research_agent.py --model mockllm/model   # harn
 Real runs use your Claude Code subscription, not an API key:
 
 ```
-uv run python -m evals.runners.claude_code --model sonnet --tasks rsch-001,rsch-002
+uv run python -m evals.runners.claude_code --model claude-sonnet-5-5 --tasks rsch-001,rsch-002
 uv run python -m evals.gate --base origin/main
 ```
 
