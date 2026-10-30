@@ -1,10 +1,15 @@
 import json
 
+import pytest
+
 from evals.runners.claude_code import (
     TOOL_PREFIX,
     agent_argv,
+    is_full_model_id,
+    main,
     parse_stream,
     percentile,
+    pin_status,
     redact,
     wilson,
 )
@@ -160,3 +165,43 @@ def test_percentile_is_nearest_rank():
     assert percentile(values, 95) == 38
     assert percentile(values, 50) == 20
     assert percentile([], 95) is None
+
+
+@pytest.mark.parametrize(
+    "model",
+    ["claude-haiku-5-5", "claude-sonnet-5", "claude-opus-5-5", "claude-haiku-4-5-20251001"],
+)
+def test_full_ids_are_recognised(model):
+    assert is_full_model_id(model)
+
+
+@pytest.mark.parametrize("model", ["haiku", "sonnet", "opus", "sonnet[1m]", "", "claude-sonnet"])
+def test_aliases_and_fragments_are_not_full_ids(model):
+    assert not is_full_model_id(model)
+
+
+def test_pin_status_accepts_the_requested_model_and_its_dated_snapshot():
+    assert pin_status("claude-haiku-5-5", ["claude-haiku-5-5"]) == "pinned"
+    assert pin_status("claude-haiku-4-5", ["claude-haiku-4-5-20251001"]) == "pinned"
+
+
+def test_pin_status_does_not_confuse_a_shorter_id_with_a_longer_version():
+    # claude-sonnet-5 is a prefix of claude-sonnet-5-5 and is a different model.
+    assert pin_status("claude-sonnet-5", ["claude-sonnet-5-5"]) == "mismatch"
+
+
+def test_pin_status_flags_a_run_that_saw_two_models_or_a_different_one():
+    assert pin_status("claude-haiku-5-5", ["claude-haiku-4-5", "claude-haiku-5-5"]) == "mismatch"
+    assert pin_status("claude-haiku-5-5", ["claude-sonnet-5-5"]) == "mismatch"
+
+
+def test_pin_status_for_an_alias_and_for_a_run_that_reported_no_model():
+    assert pin_status("haiku", ["claude-haiku-5-5"]) == "alias"
+    assert pin_status("claude-haiku-5-5", []) == "unknown"
+
+
+def test_the_runner_refuses_an_alias_before_it_loads_anything(capsys):
+    with pytest.raises(SystemExit) as exit_info:
+        main(["--model", "sonnet"])
+    assert exit_info.value.code == 2
+    assert "alias" in capsys.readouterr().err
