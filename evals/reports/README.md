@@ -57,3 +57,9 @@ which also re-runs the 23 Sep opus baseline's model on today's context files: th
 baseline reproduces (12.5%, then 18 / 15 / 12% on outcome), so the haiku and sonnet drops
 between the baseline and the repeats are most likely the model change behind the alias,
 not the rebuilt context. pass^3 on outcome is 3 of 40 for all three models.
+
+## Forbidden-source fix on all repeats (2026-11-06)
+
+The merged forbidden-source fix applied to the nine repeat runs, opus included: runs
+failing the check 155 -> 29, outcome +1 task in total, pass^3 unchanged. Every cleared run
+but one still fails the unsupported-claims regex. See `forbidden-source-rescore-2026-11-06.md`.
