@@ -47,3 +47,13 @@ a diagnostic, not a ranking.
 
 30 blind traces, one annotator: none of the three trace checks meets its bar. See
 `trace-agreement-2026-10-20.md`.
+
+## Repeat runs: pass^k (2026-10-12 and 2026-11-02, not gated)
+
+The same unchanged agent run three times per model, so a steady pass rate can be told
+apart from tasks that flip. Haiku-5-5 and sonnet-5-5 in `passk-2026-10-12.md`
+(`repeats-2026-10-12/`); opus-5-5 in `passk-opus-2026-11-02.md` (`repeats-2026-11-02/`),
+which also re-runs the 23 Sep opus baseline's model on today's context files: the
+baseline reproduces (12.5%, then 18 / 15 / 12% on outcome), so the haiku and sonnet drops
+between the baseline and the repeats are most likely the model change behind the alias,
+not the rebuilt context. pass^3 on outcome is 3 of 40 for all three models.
