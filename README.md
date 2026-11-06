@@ -50,10 +50,16 @@ What I did about it:
 6. Re-scored the stored transcripts with the human labels in place of the automatic
    fail. Opus moves from 12% to 25-28% on outcome and is still last on that layer;
    on all layers it goes from 10% to 18%, next to sonnet's 20%. The regex explained
-   about half of the original 40-point gap, not all of it. A second check, citing a
-   forbidden source, fails 18 of 40 runs for both opus and sonnet and has not been
-   examined. Full table, method and limits:
+   about half of the original 40-point gap, not all of it. Full table, method and limits:
    `evals/reports/stance-rescore-2026-10-06.md`.
+7. A second check had the same flaw. "Cited a forbidden source" failed any answer in
+   which the listicle's URL appeared, including "Excluded: <url>". Across all stored
+   runs it failed 134; under a rule that counts the URL only when it is used as support
+   or listed with no verdict, 27 still fail, and one of the 134 really relied on it. The
+   two flawed checks fire on the same paragraphs, so together they move opus's baseline
+   outcome from 12% to 32-38% (sonnet 50-57%, haiku 55%), and opus's all-layers rate to
+   20%, level with sonnet. The rule is a deterministic heuristic with a written bar, read
+   against by one automated reader, not a human. `evals/reports/forbidden-source-rescore-2026-10-20.md`.
 
 The component layer's failures were checked by hand and are real: blown step budgets,
 and URLs fetched from memory instead of from search results.
@@ -86,9 +92,11 @@ Read these before citing any number here.
   the 9 positives (the 8 current ones plus S010, moved on 7 Oct). Until they do, the
   positives are not ground truth, and nothing that depends on them gates CI. Scaffolding
   for the blind second pass: `evals/judges/stance-2026-09-23/annotator-2/`.
-- **The trace layer is uncalibrated.** Its stopping slack and grounding rule are policy
-  choices with no hand labels behind them, and most of its grounding failures are correct
-  arithmetic, not fabrication. It is reported, not gated.
+- **The trace layer misses its calibration bar.** Against 30 blind hand labels (one
+  annotator) none of the three checks reaches the pre-registered 80% agreement: tool
+  choice 70%, stopping 61%, grounding 76%, with kappa 0.00, 0.22 and 0.00. It is
+  reported, not gated, and its rates are scorer output, not agent quality.
+  `evals/reports/trace-agreement-2026-10-20.md`.
 - **One agent, one domain.** A research agent against a frozen fixture web. Nothing here
   generalises to other agents or to the live web.
 - **Cost is API-equivalent.** Runs go through Claude Code on a subscription, so the
