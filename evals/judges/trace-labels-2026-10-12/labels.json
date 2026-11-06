@@ -1,0 +1,153 @@
+{
+ "T-01": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-02": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded",
+  "note": "It gave more info thar what was asked which is not completely bad"
+ },
+ "T-03": {
+  "tool": "bad",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-04": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-05": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-06": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-07": {
+  "tool": "ok",
+  "stop": "early",
+  "ground": "grounded"
+ },
+ "T-08": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-09": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-10": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-11": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-12": {
+  "tool": "bad",
+  "stop": "overran",
+  "ground": "grounded"
+ },
+ "T-13": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-14": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-15": {
+  "tool": "bad",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-16": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-17": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-18": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-19": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-20": {
+  "tool": "bad",
+  "stop": "overran",
+  "ground": "grounded"
+ },
+ "T-21": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-22": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-23": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-24": {
+  "tool": "bad",
+  "stop": "overran",
+  "ground": "grounded"
+ },
+ "T-25": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-26": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-27": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-28": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-29": {
+  "tool": "ok",
+  "stop": "right",
+  "ground": "grounded"
+ },
+ "T-30": {
+  "tool": "ok",
+  "stop": "early",
+  "ground": "grounded"
+ }
+}
