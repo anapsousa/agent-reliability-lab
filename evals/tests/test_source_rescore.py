@@ -107,3 +107,18 @@ def test_repeats_cover_both_series_three_runs_each(results):
         "haiku (claude-haiku-5-5)": 3,
         "sonnet (claude-sonnet-5-5)": 3,
     }
+
+
+OWNER_READER = READER.with_name("owner-reader.json")
+
+
+def test_the_owner_read_only_mentions_the_heuristic_keeps():
+    # The owner's blind reading (2026-11-04) covers the 36 mentions the heuristic keeps as
+    # cited. Her construct decision (2026-11-06: tracing a claim to the source to discredit
+    # it is not citing it) therefore changes no verdict; this pins that.
+    owner = json.loads(OWNER_READER.read_text(encoding="utf-8"))
+    mentions = dict(_stored_mentions())
+    assert len(owner["labels"]) == 36
+    assert set(owner["labels"]) <= set(mentions)
+    assert all(mentions[k].stance == "ASSERTED" for k in owner["labels"])
+    assert set(owner["labels"]) == {k for k, m in mentions.items() if m.stance == "ASSERTED"}

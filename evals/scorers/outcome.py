@@ -102,6 +102,12 @@ def _compile(pattern: str, where: str) -> re.Pattern[str]:
 # rejections is reported, not barred: a missed rejection is a false fail, the old
 # behaviour. The cue lists were written after reading those mentions, so the bar is a
 # consistency check on them, not a validation (evals/tests/test_source_rescore.py).
+#
+# Construct, decided by the owner 2026-11-06: a forbidden source is cited when the answer
+# relies on it as evidence that the claim is true. Naming it as the origin of the claim
+# under review in order to discredit it ("the claim comes from <url>, which cites nothing")
+# is not citing it. Naming it as the origin with no verdict stays cited (case 3). Owner's
+# blind reading of the 36 kept mentions: judges/forbidden-source-2026-10-20/owner-reader.json.
 
 # "no" added 2026-10-21 after the second reading: without it "no reason to exclude X" read
 # as an exclusion (a false pass). It changes no verdict on the 203 stored mentions.
