@@ -9,8 +9,12 @@ layers, from the same functions, so the two harnesses are directly comparable.
 It runs on the Claude subscription, not billed API spend. `total_cost_usd` in the
 report is Claude Code's API-equivalent figure: the cost of the run had it been billed.
 
-    uv run python -m evals.runners.claude_code --model sonnet
-    uv run python -m evals.runners.claude_code --model sonnet --tasks rsch-001,rsch-002
+    uv run python -m evals.runners.claude_code --model claude-sonnet-5-5
+    uv run python -m evals.runners.claude_code --model claude-sonnet-5-5 --tasks rsch-001,rsch-002
+
+`--model` takes a full id. An alias (`sonnet`) is refused unless `--allow-alias` is
+given, and the report says which model Claude Code actually reported (`models_seen`)
+and whether it matched the request (`model_pin`).
 
 Isolation, verified against Claude Code 2.1.280 by listing the tools in the stream's
 init event: the three fixture tools and nothing else. Every built-in is disabled by
@@ -54,6 +58,36 @@ RUNS = REPO / "evals" / "runs" / "claude-code"  # gitignored: full transcripts
 DEFAULT_MAX_TURNS = 12
 
 _EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
+
+# A full id is `claude-<family>-<version>`, optionally with a dated snapshot suffix
+# (`claude-haiku-4-5-20251001`). Anything else (`haiku`, `sonnet`) is an alias, and an
+# alias is moved by Anthropic without telling the report: on 23 Sep `haiku` was
+# claude-haiku-4-5, on 12 Oct claude-haiku-5-5.
+_FULL_ID = re.compile(r"claude-[a-z]+-\d+(-\d+)?(-\d{8})?")
+_SNAPSHOT = re.compile(r"-\d{8}")
+
+
+def is_full_model_id(model: str) -> bool:
+    return _FULL_ID.fullmatch(model) is not None
+
+
+def pin_status(requested: str, models_seen: list[str]) -> str:
+    """Did the run measure the model it asked for?
+
+    `alias`: the request was not a full id, so nothing pins it. `mismatch`: a full id
+    was requested and Claude Code reported a different model. `unknown`: it reported
+    none. Otherwise `pinned`. A dated snapshot of the requested id counts as the same
+    model; a longer version number (`claude-sonnet-5` against `claude-sonnet-5-5`) does
+    not.
+    """
+    if not is_full_model_id(requested):
+        return "alias"
+    if not models_seen:
+        return "unknown"
+    same = all(
+        m == requested or _SNAPSHOT.fullmatch(m.removeprefix(requested)) for m in models_seen
+    )
+    return "pinned" if same else "mismatch"
 
 
 def redact(text: str) -> str:
@@ -381,13 +415,28 @@ def git_sha() -> str:
 def main(argv: list[str] | None = None) -> Path:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--version", default="v1", help="pinned agent version under agent/")
-    parser.add_argument("--model", default="sonnet")
+    parser.add_argument(
+        "--model",
+        default="claude-sonnet-5-5",
+        help="a full model id; an alias (haiku, sonnet, opus) needs --allow-alias",
+    )
+    parser.add_argument(
+        "--allow-alias",
+        action="store_true",
+        help="run on an alias anyway; the report records model_pin: alias and the gate "
+        "keys it on the model the alias resolved to",
+    )
     parser.add_argument("--effort", default=None)
     parser.add_argument("--max-turns", type=int, default=DEFAULT_MAX_TURNS)
     parser.add_argument("--tasks", default="", help="comma-separated ids; default all")
     parser.add_argument("--concurrency", type=int, default=4)
     parser.add_argument("--timeout", type=int, default=900, help="seconds per task")
     args = parser.parse_args(argv)
+    if not is_full_model_id(args.model) and not args.allow_alias:
+        parser.error(
+            f"--model {args.model!r} is an alias, and an alias moves between runs "
+            "(pass a full id such as claude-haiku-5-5, or --allow-alias)"
+        )
 
     corpus = load_corpus()
     golden = load_golden()
@@ -423,6 +472,8 @@ def main(argv: list[str] | None = None) -> Path:
     with ThreadPoolExecutor(max_workers=args.concurrency) as pool:
         rows = sorted(pool.map(one, golden), key=lambda r: r["id"])
 
+    models_seen = sorted({r["model"] for r in rows if r["model"]})
+    pin = pin_status(args.model, models_seen)
     report = {
         "run_id": run_id,
         "agent": "research-agent",
@@ -430,7 +481,8 @@ def main(argv: list[str] | None = None) -> Path:
         "harness": "claude-code-cli",
         "claude_code": cli_version(),
         "model_alias": args.model,
-        "models_seen": sorted({r["model"] for r in rows if r["model"]}),
+        "models_seen": models_seen,
+        "model_pin": pin,
         "effort": args.effort,
         "max_turns": args.max_turns,
         "corpus_version": corpus.ground_truth["corpus_version"],
@@ -458,6 +510,11 @@ def main(argv: list[str] | None = None) -> Path:
         f"  transcripts: {run_dir.relative_to(REPO)} (gitignored, holds private context; "
         "keep them: python -m evals.keep_runs --dest <dir outside the repo>)"
     )
+    if pin == "mismatch":
+        raise SystemExit(
+            f"asked for {args.model}, Claude Code reported {models_seen}: the report is "
+            "written but it did not measure the pinned model. Do not commit it."
+        )
     return out
 
 
