@@ -74,10 +74,10 @@ Details in `evals/judges/calibration-2026-09-15/report.md`.
 
 Read these before citing any number here.
 
-- **The headline table is one run per task.** Repeated runs exist only for haiku-5-5 and
-  sonnet-5-5, k = 3, from 12 Oct (`evals/reports/passk-2026-10-12.md`). Those are not the
-  baseline's models, opus was not repeated, and three runs give a lower bound on the
-  spread, not the spread.
+- **The headline table is one run per task.** Repeated runs exist for haiku-5-5 and
+  sonnet-5-5 (k = 3, 12 Oct, `evals/reports/passk-2026-10-12.md`) and opus-5-5 (k = 3,
+  2 Nov, `evals/reports/passk-opus-2026-11-02.md`). Only opus is the baseline's model, and
+  three runs give a lower bound on the spread, not the spread.
 - **The headline outcome ranking in the table above is wrong, and the corrected one is
   not clean either.** The reports are kept as they were. The re-scored numbers are in
   `evals/reports/stance-rescore-2026-10-06.md`; the models are not separable at n = 40.
