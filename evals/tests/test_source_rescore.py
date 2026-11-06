@@ -10,6 +10,7 @@ from evals.source_rescore import (
     BASELINE_GLOB,
     READER,
     REPEATS,
+    REPEATS_LATER,
     REPORTS,
     load_reader,
     mention_key,
@@ -102,11 +103,32 @@ def test_the_fix_only_ever_lifts_and_the_bounds_are_ordered(results):
         assert c["cited_runs_after"] <= c["cited_runs_before"]
 
 
-def test_repeats_cover_both_series_three_runs_each(results):
+def test_repeats_cover_all_three_series_three_runs_each(results):
     assert {s: len(r) for s, r in results["repeats"].items()} == {
         "haiku (claude-haiku-5-5)": 3,
         "sonnet (claude-sonnet-5-5)": 3,
+        "claude-opus-5-5 (claude-opus-5-5)": 3,
     }
+
+
+OPUS_READING = READER.with_name("opus-2026-11-02-reading.json")
+
+
+def test_the_bar_holds_on_the_later_opus_repeats():
+    # The 2 Nov opus repeats came after the 203-mention readings. Every mention the
+    # heuristic passes there was read (2026-11-06, not blind to the verdict) and must be
+    # a rejection; the reading covers exactly the passed ones.
+    reading = json.loads(OPUS_READING.read_text(encoding="utf-8"))["labels"]
+    passed = set()
+    for path in sorted(REPEATS_LATER[0].glob("*.json")):
+        report = json.loads(path.read_text(encoding="utf-8"))
+        for task in report["tasks"]:
+            for m in forbidden_source_mentions(task["answer"], FORBIDDEN):
+                if m.stance == "REFUTED":
+                    passed.add(mention_key(path.name, task["id"], m.line_no))
+    assert len(passed) == 75
+    assert set(reading) == passed
+    assert set(reading.values()) == {"REJECT"}
 
 
 OWNER_READER = READER.with_name("owner-reader.json")

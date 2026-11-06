@@ -9,7 +9,8 @@ check, the golden set and the stored trajectory and component verdicts are untou
 any movement is attributable to that check alone.
 
 Covered: the 23 Sep baseline (three models, also combined with the human stance labels
-from `evals.rescore`) and the 12 Oct repeats (haiku-5-5 and sonnet-5-5, three runs each).
+from `evals.rescore`), the 12 Oct repeats (haiku-5-5 and sonnet-5-5, three runs each) and
+the 2 Nov repeats (opus-5-5, three runs; added 2026-11-06).
 
 Every mention was also read once, by the assistant, not by the owner
 (`judges/forbidden-source-2026-10-20/reader.json`). That reading checks the heuristic's
@@ -41,6 +42,9 @@ from evals.tasks.research_agent import load_golden
 REPORTS = Path(__file__).parent / "reports"
 BASELINE_GLOB = "research-agent-v1-claude-code-*-2026-09-23T*.json"
 REPEATS = REPORTS / "repeats-2026-10-12"
+# Repeats run after the reader read the 203 mentions above; their passed mentions were read
+# separately (judges/forbidden-source-2026-10-20/opus-2026-11-02-reading.json).
+REPEATS_LATER = (REPORTS / "repeats-2026-11-02",)
 READER = Path(__file__).parent / "judges" / "forbidden-source-2026-10-20" / "reader.json"
 MODELS = ("haiku", "sonnet", "opus")
 # Reader categories, one per mention. Only "critique" (names the source while finding
@@ -180,7 +184,11 @@ def pass_k(results: list[dict], layer: str = "per_task") -> dict:
     return out
 
 
-def rescore_all(reports_dir: Path = REPORTS, repeats_dir: Path = REPEATS) -> dict:
+def rescore_all(
+    reports_dir: Path = REPORTS,
+    repeats_dir: Path = REPEATS,
+    later_dirs: tuple[Path, ...] = REPEATS_LATER,
+) -> dict:
     ground_truth = load_corpus().ground_truth
     golden = {t["id"]: t for t in load_golden()}
     reader = load_reader()
@@ -203,7 +211,12 @@ def rescore_all(reports_dir: Path = REPORTS, repeats_dir: Path = REPEATS) -> dic
                 for bound, policy in (("strict", "fail"), ("lenient", "pass"))
             },
         }
-    for name, report in _load(sorted(repeats_dir.glob("research-agent-v1-claude-code-*.json"))):
+    repeat_paths = [
+        p
+        for d in (repeats_dir, *later_dirs)
+        for p in sorted(d.glob("research-agent-v1-claude-code-*.json"))
+    ]
+    for name, report in _load(repeat_paths):
         series = f"{report['model_alias']} ({'+'.join(report.get('models_seen') or [])})"
         out["repeats"].setdefault(series, []).append(
             rescore_report(name, report, golden, ground_truth, reader=reader)
@@ -264,7 +277,7 @@ def render(results: dict) -> str:
         )
     lines += [
         "",
-        "Repeats 2026-10-12, forbidden-source fix alone:",
+        "Repeats 2026-10-12 and 2026-11-02, forbidden-source fix alone:",
         "",
         (
             "| Series | Run | Outcome before | Outcome after | All layers before | All layers after "
