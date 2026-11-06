@@ -36,3 +36,13 @@ with the human labels instead. See `stance-rescore-2026-10-06.md`: opus moves fr
 The same stored runs, scored step by step on tool choice, stopping and grounding,
 separately from the outcome. See `trace-scores-2026-10-08.md`. Uncalibrated: read it as
 a diagnostic, not a ranking.
+
+## Repeat runs: pass^k (2026-10-12 and 2026-11-02, not gated)
+
+The same unchanged agent run three times per model, so a steady pass rate can be told
+apart from tasks that flip. Haiku-5-5 and sonnet-5-5 in `passk-2026-10-12.md`
+(`repeats-2026-10-12/`); opus-5-5 in `passk-opus-2026-11-02.md` (`repeats-2026-11-02/`),
+which also re-runs the 23 Sep opus baseline's model on today's context files: the
+baseline reproduces (12.5%, then 18 / 15 / 12% on outcome), so the haiku and sonnet drops
+between the baseline and the repeats are most likely the model change behind the alias,
+not the rebuilt context. pass^3 on outcome is 3 of 40 for all three models.
