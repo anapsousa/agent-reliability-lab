@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Label 30 traces</title>
+<style>
+  :root { --bg:#fafafa; --fg:#1a1a1a; --muted:#5c5c5c; --card:#fff; --line:#d8d8d8; --accent:#1f5fbf; --bad:#b3261e; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#151515; --fg:#eaeaea; --muted:#a8a8a8; --card:#1f1f1f; --line:#3a3a3a; --accent:#7fb0ff; --bad:#ff8a80; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, sans-serif; }
+  main { max-width: 860px; margin: 0 auto; padding: 24px 16px 96px; }
+  h1 { font-size: 1.25rem; margin: 0 0 4px; }
+  h2 { font-size: 1rem; margin: 0 0 6px; }
+  .muted { color: var(--muted); font-size: .9rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px; margin:16px 0; }
+  pre { white-space: pre-wrap; word-wrap: break-word; font: inherit; margin: 6px 0 0; }
+  .step { border-top:1px solid var(--line); padding:8px 0; }
+  .step:first-child { border-top:0; }
+  .tool { font-weight:600; } .err { color: var(--bad); }
+  .result { max-height: 22rem; overflow:auto; font-size:.85rem; background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:8px; }
+  .q { margin:14px 0 4px; font-weight:600; }
+  .opts { display:grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap:8px; }
+  button { font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--fg); cursor:pointer; text-align:left; }
+  button[aria-pressed="true"] { border-color: var(--accent); outline: 2px solid var(--accent); }
+  button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  .nav { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+  textarea { width:100%; font:inherit; padding:8px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--fg); }
+  .bar { position:sticky; top:0; background:var(--bg); padding:8px 0; border-bottom:1px solid var(--line); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Label 30 traces</h1>
+  <p class="muted">Blind: no model names, no scores, no verdicts. Judge each trace on its own. Three questions per trace. Arrow keys move, progress is kept in this browser, export at the end. This file holds the agent's private context, so keep it out of the repo.</p>
+  <div class="bar"><span id="pos"></span> <span class="muted" id="status"></span></div>
+
+  <div class="card"><h2>Task given to the agent</h2><pre id="task"></pre><div class="muted" id="effort"></div></div>
+  <div class="card"><h2>What the agent did</h2><div id="steps"></div></div>
+  <div class="card"><h2>Final answer</h2><pre id="answer"></pre></div>
+
+  <div class="card" role="group" aria-label="Labels">
+    <div class="q">1. Tool choice. Would you have made every one of those calls?</div>
+    <div class="opts" data-q="tool">
+      <button data-v="ok">ok: every call was sensible</button>
+      <button data-v="bad">bad: at least one call was wrong or wasteful</button>
+    </div>
+    <div class="q">2. Stopping. Did it stop when it had enough?</div>
+    <div class="opts" data-q="stop">
+      <button data-v="right">right: it stopped about when it had its sources</button>
+      <button data-v="overran">overran: it kept going after it had enough</button>
+      <button data-v="early">early: it answered without what it needed</button>
+    </div>
+    <div class="q">3. Grounding. Is every URL and number in the answer supported by what the tools returned, or clearly marked as derived from it?</div>
+    <div class="opts" data-q="ground">
+      <button data-v="grounded">grounded</button>
+      <button data-v="ungrounded">ungrounded: at least one URL or figure is not supported</button>
+    </div>
+    <div class="q">Note (optional: which step, which figure)</div>
+    <textarea id="note" rows="2"></textarea>
+  </div>
+
+  <div class="nav">
+    <button id="prev">Previous</button>
+    <button id="next">Next</button>
+    <button id="export">Export labels.json</button>
+  </div>
+</main>
+<script>
+const ITEMS = /*ITEMS*/[];
+const STORE = "ral-trace-labels-v1";
+let labels = {};
+try { labels = JSON.parse(localStorage.getItem(STORE) || "{}"); } catch (e) { labels = {}; }
+let i = 0;
+const $ = (id) => document.getElementById(id);
+const complete = (l) => l && l.tool && l.stop && l.ground;
+function save() { try { localStorage.setItem(STORE, JSON.stringify(labels)); } catch (e) {} }
+
+function renderSteps(it) {
+  const box = $("steps"); box.replaceChildren();
+  if (!it.steps.length) { box.textContent = "No tool calls."; return; }
+  it.steps.forEach((s, k) => {
+    const d = document.createElement("div"); d.className = "step";
+    const head = document.createElement("div");
+    const t = document.createElement("span"); t.className = "tool"; t.textContent = `${k + 1}. ${s.tool}`;
+    head.append(t, " ", document.createTextNode(s.args));
+    if (s.error) { const e = document.createElement("span"); e.className = "err"; e.textContent = "  (the call failed)"; head.append(e); }
+    d.append(head);
+    if (s.result) {
+      const det = document.createElement("details"); const sum = document.createElement("summary");
+      sum.textContent = `returned ${s.result.length} characters`; det.append(sum);
+      const r = document.createElement("pre"); r.className = "result"; r.textContent = s.result; det.append(r); d.append(det);
+    }
+    box.append(d);
+  });
+}
+function render() {
+  const it = ITEMS[i], l = labels[it.id] || {};
+  $("pos").textContent = `${it.id} · ${i + 1} of ${ITEMS.length}`;
+  $("task").textContent = it.task; $("effort").textContent = "Effort asked for: " + it.effort;
+  renderSteps(it); $("answer").textContent = it.answer;
+  document.querySelectorAll(".opts").forEach(g => g.querySelectorAll("button").forEach(b =>
+    b.setAttribute("aria-pressed", String(l[g.dataset.q] === b.dataset.v))));
+  $("note").value = l.note || "";
+  $("status").textContent = `${ITEMS.filter(x => complete(labels[x.id])).length} of ${ITEMS.length} complete`;
+}
+document.querySelectorAll(".opts").forEach(g => g.querySelectorAll("button").forEach(b =>
+  b.addEventListener("click", () => {
+    const id = ITEMS[i].id; labels[id] = {...(labels[id] || {}), [g.dataset.q]: b.dataset.v}; save(); render();
+  })));
+$("note").addEventListener("input", () => {
+  const id = ITEMS[i].id; labels[id] = {...(labels[id] || {}), note: $("note").value}; save();
+});
+function exportLabels() {
+  const missing = ITEMS.filter(x => !complete(labels[x.id])).map(x => x.id);
+  if (missing.length && !confirm(`${missing.length} incomplete (${missing.join(", ")}). Export anyway?`)) return;
+  const out = {}; ITEMS.forEach(x => { if (labels[x.id]) out[x.id] = labels[x.id]; });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 1) + "\n"], {type: "application/json"}));
+  a.download = "trace-labels.json"; a.click();
+}
+$("prev").onclick = () => { if (i > 0) { i--; render(); window.scrollTo(0, 0); } };
+$("next").onclick = () => { if (i < ITEMS.length - 1) { i++; render(); window.scrollTo(0, 0); } };
+$("export").onclick = exportLabels;
+document.addEventListener("keydown", (e) => {
+  if (e.target.tagName === "TEXTAREA") return;
+  if (e.key === "ArrowLeft") $("prev").click(); else if (e.key === "ArrowRight") $("next").click();
+});
+render();
+</script>
+</body>
+</html>
