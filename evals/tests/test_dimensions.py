@@ -52,3 +52,16 @@ def test_render_has_a_row_per_series_and_says_safety_not_measured():
     assert "m-1 (k = 2)" in text
     assert text.count("not measured") == 1
     assert "$0.10 ($0.10-$0.10)" in text  # each run is one $0.10 task
+
+
+def test_committed_reports_cost_summary_equals_sum_of_task_costs():
+    import json
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1] / "reports"
+    paths = sorted(root.glob("**/research-agent-*.json"))
+    assert paths
+    for path in paths:
+        rep = json.loads(path.read_text(encoding="utf-8"))
+        total = round(sum(t["cost_usd"] for t in rep["tasks"]), 4)
+        assert total == pytest.approx(rep["summary"]["cost_usd"]["total"], abs=1e-4), path.name

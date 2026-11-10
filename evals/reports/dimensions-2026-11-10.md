@@ -44,18 +44,36 @@ How to read it:
    ($5.76 against $0.19 for the same 40 tasks) and sonnet about 15 times, while the mean
    `all_layers` pass rate is 8%, 2% and 0% and none of the three is reliable. With rates this low,
    the order between models is within noise at n = 40 (one task is 2.5 points per run).
-2. **Haiku-5-5 recorded a tenth of the cost of haiku-4-5 on the same tasks.** The 23 Sep baseline
-   (`evals/reports/research-agent-v1-claude-code-haiku-2026-09-23T08-11-54Z.json`, haiku-4-5)
-   has total $1.91; the three haiku-5-5 runs have $0.19 each. Turns fell less than cost
-   (641 against 486 to 496 summed over the 40 tasks), so most of the drop is the per-token price
-   Claude Code applies, not a shorter trajectory. I have not checked that price table, so treat
-   the ratio as "what the report recorded", not as a verified price.
+2. **Cost is recorded, not computed, in this repo.** `evals/runners/claude_code.py` copies the
+   `total_cost_usd` field of Claude Code's result event unchanged (line 204) and sums it (line 317).
+   There is no price table, no token field and no cache-read field in the repo or in any report
+   JSON, so a per-token price cannot be checked here. What the files do show: the per-task costs
+   add up exactly to each report's `summary.cost_usd.total` (all 12 reports, pinned by a test), so
+   the recording is internally consistent.
+
 3. **Latency tracks model size but the tail does not.** p50 runs 16 s (haiku), 18 s (sonnet),
    28 s (opus); p95 runs 36, 40 and 53 s. Sonnet's single 105 s task-run is the longest of the 360.
 4. **Cheapest per passing run is not the same as best.** Haiku has the lowest cost per
    `all_layers` pass ($0.29) on 2 passes in 120; opus is $1.73 on 10. Neither number supports a
    model choice at this sample size. What would: more tasks, and the components layer repaired
    (its failures are real: step budgets and URLs from memory, per the baseline README).
+
+## Unverified
+
+- **Haiku cost drop.** The 23 Sep haiku-4-5 baseline
+  (`evals/reports/research-agent-v1-claude-code-haiku-2026-09-23T08-11-54Z.json`) totals $1.91 over
+  641 turns ($0.0030 per turn). The three haiku-5-5 runs total $0.19 each over 486-496 turns
+  ($0.0004 per turn). Turns fell about 24%, cost about 90%. The per-turn cost of sonnet
+  ($0.0079 on sonnet-5, $0.0071-$0.0073 on sonnet-5-5) and opus ($0.0143 baseline,
+  $0.0142-$0.0144 on the 2 and 12 Oct and 2 Nov runs) is stable across Claude Code 2.1.280 to
+  2.1.303, which argues against a general recording fault. Not checked, because the data is not in
+  the repo: token counts, cache-read tokens, and the price Claude Code applied to each model.
+  So (a) real token difference, (b) a price-table change for haiku, and (c) cache or alias
+  accounting cannot be told apart from these files. Treat the haiku figures as "what Claude Code
+  reported", not as evidence that haiku-5-5 is ten times cheaper.
+- Sonnet and opus $/run were re-added from per-task `cost_usd` and match the summaries
+  (sonnet $2.78-$2.92, opus $5.64-$5.85 per run); their earlier single-run baselines ($3.44 and
+  $5.59) sit in the same range.
 
 ## Limits
 
