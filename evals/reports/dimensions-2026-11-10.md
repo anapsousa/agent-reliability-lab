@@ -41,7 +41,7 @@ How to read it:
 ## What the table says
 
 1. **Cost spreads far more than quality does.** Opus costs about 30 times a haiku run
-   ($5.76 against $0.19 for the same 40 tasks) and sonnet about 15 times, while the mean
+   ($5.76 against $0.19 for the same 40 tasks, as recorded; see Unverified) and sonnet about 15 times, while the mean
    `all_layers` pass rate is 8%, 2% and 0% and none of the three is reliable. With rates this low,
    the order between models is within noise at n = 40 (one task is 2.5 points per run).
 2. **Cost is recorded, not computed, in this repo.** `evals/runners/claude_code.py` copies the
