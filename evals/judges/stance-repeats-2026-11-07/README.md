@@ -21,7 +21,7 @@ all 467 in the same format for a later judge run.
 | `items.jsonl` | 48 passages, no model, task or run attached |
 | `label.html` | Open locally. Keys 1/2/3, progress saved in the browser, **Download labels.json** at the end |
 | `key.json` | item -> report, model, task. **Do not open before labelling** (it is for scoring) |
-| `labels.json` | Human labels, committed once done (not yet; the owner has not labelled) |
+| `labels.json` | Owner's labels, 48 of 48, done blind in `label.html` on 2026-11-19. Scored in `../../reports/stance-repeats-sample-2026-11-19.md` |
 
 Label definitions are the baseline's: ASSERTED (presented as fact or relied on), REFUTED
 (named in order to reject, correct or warn against it), NEUTRAL (attributed, no verdict).
