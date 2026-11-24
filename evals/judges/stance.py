@@ -13,7 +13,7 @@ the next.
 
     uv run python -m evals.judges.stance calibrate --model sonnet
     uv run python -m evals.judges.stance calibrate --model claude-sonnet-5-5 \
-        --set evals/judges/stance-repeats-2026-11-07 --fresh --tag -run1
+        --set evals/judges/stance-repeats-2026-11-07 --fresh --tag=-run1
     uv run python -m evals.judges.stance stability A.json B.json
 """
 
@@ -248,7 +248,9 @@ def main(argv: list[str] | None = None) -> None:
     parser.add_argument("command", choices=["calibrate", "stability"])
     parser.add_argument("runs", nargs="*", type=Path, help="stability: two judge-*.json files")
     parser.add_argument("--model", default="sonnet")
-    parser.add_argument("--tag", default="", help="suffix for the output file, e.g. -adjudicated")
+    parser.add_argument(
+        "--tag", default="", help="suffix for the output file; write it as --tag=-adjudicated"
+    )
     parser.add_argument("--set", dest="cal_dir", type=Path, default=CAL_DIR)
     parser.add_argument("--fresh", action="store_true", help="bypass the verdict cache")
     args = parser.parse_args(argv)

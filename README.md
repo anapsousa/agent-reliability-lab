@@ -87,7 +87,9 @@ Read these before citing any number here.
   ones. Repeated runs (k >= 3) are the way to tighten it.
 - **The stance judge failed its pre-registered bar** (asserted recall 25%, bar 90%) and
   is not used for scoring. The labels behind that number are one annotator's, with 8
-  positives.
+  positives. Scored again on 24 Nov against 48 newer labelled passages, it caught 0 of 4
+  in two runs; those labels came from a three-option sheet and six of them are back with
+  the owner for a blind four-option re-read. `evals/reports/stance-judge-repeats-2026-11-24.md`.
 - **One annotator.** Every stance label, and the bar the judge is held to, come from the
   same person, and round 1 had eleven key slips. A second annotator has not yet labelled
   the 9 positives (the 8 current ones plus S010, moved on 7 Oct). Until they do, the

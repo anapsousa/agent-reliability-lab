@@ -22,6 +22,8 @@ all 467 in the same format for a later judge run.
 | `label.html` | Open locally. Keys 1/2/3, progress saved in the browser, **Download labels.json** at the end |
 | `key.json` | item -> report, model, task. **Do not open before labelling** (it is for scoring) |
 | `labels.json` | Owner's labels, 48 of 48, done blind in `label.html` on 2026-11-19. Scored in `../../reports/stance-repeats-sample-2026-11-19.md` |
+| `judge-claude-sonnet-5-5-run1.json`, `-run2.json` | The sonnet judge over the 48, two fresh runs on 2026-11-24. Report: `../../reports/stance-judge-repeats-2026-11-24.md` |
+| `reread/` | Blind four-option sheet for the 6 contested items among 12 decoys. **Label `reread/label.html` before opening the judge files, `reread/key.json` or the report's later sections** |
 
 Label definitions are the baseline's: ASSERTED (presented as fact or relied on), REFUTED
 (named in order to reject, correct or warn against it), NEUTRAL (attributed, no verdict).
@@ -75,11 +77,20 @@ Fixed before the run:
    re-issued, and the 10% rule above is applied once more to the adjudicated labels. The
    first report stays as it is.
 
+### Result (2026-11-24)
+
+ASSERTED recall 0 of 4 in both runs; all 43 REFUTED labels passed by the judge in both; one
+verdict changed between runs, none across pass/fail. The bar is missed again and nothing is
+re-scored. The judge and the labels differ on six items, and this sample's sheet had no
+UNRELATED option, so those six are in `reread/` for a blind four-option re-read by the
+owner. Full reading: `../../reports/stance-judge-repeats-2026-11-24.md`.
+
 ## Reproduce
 
     uv run python -m evals.judges.stance_repeats count
     uv run python -m evals.judges.stance_repeats build
     uv run python -m evals.judges.stance calibrate --model claude-sonnet-5-5 \
-        --set evals/judges/stance-repeats-2026-11-07 --fresh --tag -run1
+        --set evals/judges/stance-repeats-2026-11-07 --fresh --tag=-run1
+    uv run python -m evals.judges.stance_repeats score
 
 `tests/test_stance_repeats.py` rebuilds the set and checks it byte for byte.
