@@ -2,13 +2,17 @@ import json
 
 import pytest
 
+from evals.judges import stance
 from evals.judges.stance import (
     CAL_DIR,
     build_prompt,
+    calibrate,
     calibration,
     cohen_kappa,
     load_labels,
+    models_used,
     parse_verdict,
+    stability,
 )
 
 
@@ -72,3 +76,65 @@ def test_adjudication_page_items_match_the_sonnet_disagreements():
     sonnet = json.loads((CAL_DIR / "judge-sonnet.json").read_text())
     assert [i["item"] for i in embedded] == [d["item"] for d in sonnet["disagreements"]]
     assert len(embedded) == 25
+
+
+def _labelled_set(tmp_path):
+    items = [
+        {"item": "X1", "claim": "c", "passage": "p1"},
+        {"item": "X2", "claim": "c", "passage": "p2"},
+        {"item": "X3", "claim": "c", "passage": "p3"},
+    ]
+    (tmp_path / "items.jsonl").write_text("".join(json.dumps(i) + "\n" for i in items))
+    (tmp_path / "labels.json").write_text(
+        json.dumps({"X1": "ASSERTED", "X2": "REFUTED", "X3": "REFUTED"})
+    )
+
+
+def test_calibrate_scores_any_labelled_set_and_keeps_every_verdict(tmp_path, monkeypatch):
+    _labelled_set(tmp_path)
+    seen = {}
+
+    def fake_judge_many(pairs, model, workers=6, fresh=False):
+        seen["fresh"] = fresh
+        stances = ["UNRELATED", "REFUTED", "REFUTED"]
+        return [{"stance": s, "reason": "r", "models_used": ["m-1"]} for s in stances]
+
+    monkeypatch.setattr(stance, "judge_many", fake_judge_many)
+    result = calibrate("m", "-run1", tmp_path, fresh=True)
+    assert seen["fresh"] is True
+    assert result["asserted_recall"] == 0.0
+    assert result["models_used"] == ["m-1"]
+    assert result["verdicts"] == {"X1": "UNRELATED", "X2": "REFUTED", "X3": "REFUTED"}
+    assert [d["item"] for d in result["disagreements"]] == ["X1"]
+    assert json.loads((tmp_path / "judge-m-run1.json").read_text()) == result
+
+
+def test_a_fresh_run_neither_reads_nor_writes_the_cache(tmp_path, monkeypatch):
+    cache = tmp_path / "stance-cache.json"
+    monkeypatch.setattr(stance, "CACHE", cache)
+    calls = []
+
+    def fake_judge(claim, passage, model, cache_arg):
+        calls.append(cache_arg)
+        return {"stance": "REFUTED"}
+
+    monkeypatch.setattr(stance, "judge", fake_judge)
+    stance.judge_many([("c", "p"), ("c", "q")], "m", fresh=True)
+    assert calls == [None, None]
+    assert not cache.exists()
+
+
+def test_models_used_reads_the_envelope_and_tolerates_its_absence():
+    envelope = {"result": "{}", "modelUsage": {"claude-b": {}, "claude-a": {}}}
+    assert models_used(json.dumps(envelope)) == ["claude-a", "claude-b"]
+    assert models_used(json.dumps({"result": "{}"})) == []
+
+
+def test_stability_separates_any_change_from_a_pass_fail_change():
+    a = {"verdicts": {"X1": "REFUTED", "X2": "ASSERTED", "X3": "REFUTED"}}
+    b = {"verdicts": {"X1": "UNRELATED", "X2": "REFUTED", "X3": "REFUTED"}}
+    out = stability(a, b)
+    assert [c["item"] for c in out["changed"]] == ["X1", "X2"]
+    assert out["changed_pass_fail"] == ["X2"]
+    with pytest.raises(ValueError):
+        stability(a, {"verdicts": {"X1": "REFUTED"}})

@@ -12,6 +12,9 @@ must not be able to act on them. One call per item also keeps one verdict from a
 the next.
 
     uv run python -m evals.judges.stance calibrate --model sonnet
+    uv run python -m evals.judges.stance calibrate --model claude-sonnet-5-5 \
+        --set evals/judges/stance-repeats-2026-11-07 --fresh --tag -run1
+    uv run python -m evals.judges.stance stability A.json B.json
 """
 
 from __future__ import annotations
@@ -79,6 +82,17 @@ def _load_cache() -> dict:
     return json.loads(CACHE.read_text()) if CACHE.exists() else {}
 
 
+def models_used(stdout: str) -> list[str]:
+    """The model ids Claude Code says it billed the call to, from the JSON envelope.
+
+    An alias such as `sonnet` resolves to whatever the CLI ships that week (it moved under
+    the eval runner between 23 Sep and 12 Oct), so a calibration figure is only attached
+    to a model if the envelope names it.
+    """
+    usage = json.loads(stdout).get("modelUsage")
+    return sorted(usage) if isinstance(usage, dict) else []
+
+
 def judge(claim: str, passage: str, model: str = "sonnet", cache: dict | None = None) -> dict:
     """One verdict, cached by (model, instructions, claim, passage)."""
     key = _key(model, claim, passage)
@@ -95,12 +109,20 @@ def judge(claim: str, passage: str, model: str = "sonnet", cache: dict | None = 
     if proc.returncode != 0:
         raise RuntimeError(f"claude -p failed (rc={proc.returncode}): {proc.stderr[:500]}")
     verdict = parse_verdict(proc.stdout)
+    verdict["models_used"] = models_used(proc.stdout)
     if cache is not None:
         cache[key] = verdict
     return verdict
 
 
-def judge_many(pairs: list[tuple[str, str]], model: str, workers: int = 6) -> list[dict]:
+def judge_many(
+    pairs: list[tuple[str, str]], model: str, workers: int = 6, fresh: bool = False
+) -> list[dict]:
+    """Verdicts in input order. `fresh` neither reads nor writes the cache: a repeat run
+    that is meant to measure the judge's run-to-run stability must call the model again."""
+    if fresh:
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            return list(pool.map(lambda p: judge(p[0], p[1], model, None), pairs))
     cache = _load_cache()
     with ThreadPoolExecutor(max_workers=workers) as pool:
         out = list(pool.map(lambda p: judge(p[0], p[1], model, cache), pairs))
@@ -173,11 +195,15 @@ def load_labels(cal_dir: Path = CAL_DIR) -> dict[str, str]:
     return labels
 
 
-def calibrate(model: str, tag: str = "") -> dict:
-    """Score the judge against `load_labels()`; `tag` keeps an earlier round's file intact."""
-    items = [json.loads(line) for line in (CAL_DIR / "items.jsonl").open()]
-    labels = load_labels()
-    verdicts = judge_many([(it["claim"], it["passage"]) for it in items], model)
+def calibrate(model: str, tag: str = "", cal_dir: Path = CAL_DIR, fresh: bool = False) -> dict:
+    """Score the judge against the labels in `cal_dir`; `tag` keeps an earlier file intact.
+
+    `cal_dir` is any folder with `items.jsonl` and `labels.json` (and optionally
+    `adjudicated.json`): the baseline set by default, or a later labelled sample.
+    """
+    items = [json.loads(line) for line in (cal_dir / "items.jsonl").open(encoding="utf-8")]
+    labels = load_labels(cal_dir)
+    verdicts = judge_many([(it["claim"], it["passage"]) for it in items], model, fresh=fresh)
     human = [labels[it["item"]] for it in items]
     judged = [v["stance"] for v in verdicts]
     stats = calibration(human, judged)
@@ -186,20 +212,55 @@ def calibrate(model: str, tag: str = "") -> dict:
         for it, h, v in zip(items, human, verdicts, strict=True)
         if h != v["stance"]
     ]
-    result = {"model": model, "effort": "low", **stats, "disagreements": disagreements}
-    out = CAL_DIR / f"judge-{model}{tag}.json"
-    out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n")
+    result = {
+        "model": model,
+        "models_used": sorted({m for v in verdicts for m in v.get("models_used", [])}),
+        "effort": "low",
+        "fresh": fresh,
+        **stats,
+        "disagreements": disagreements,
+        "verdicts": {it["item"]: v["stance"] for it, v in zip(items, verdicts, strict=True)},
+    }
+    out = cal_dir / f"judge-{model}{tag}.json"
+    out.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return result
 
 
-def main() -> None:
+def stability(run_a: dict, run_b: dict) -> dict:
+    """Items whose verdict differs between two calibrate runs over the same set.
+
+    `changed` counts any change of stance; `changed_pass_fail` only the changes that
+    cross the line the scorer draws (REFUTED or UNRELATED pass, ASSERTED or NEUTRAL fail).
+    """
+    a, b = run_a["verdicts"], run_b["verdicts"]
+    if set(a) != set(b):
+        raise ValueError("the two runs do not cover the same items")
+    changed = sorted(k for k in a if a[k] != b[k])
+    return {
+        "n": len(a),
+        "changed": [{"item": k, "a": a[k], "b": b[k]} for k in changed],
+        "changed_pass_fail": [k for k in changed if (a[k] in PASSING) != (b[k] in PASSING)],
+    }
+
+
+def main(argv: list[str] | None = None) -> None:
     parser = argparse.ArgumentParser(description="Stance judge")
-    parser.add_argument("command", choices=["calibrate"])
+    parser.add_argument("command", choices=["calibrate", "stability"])
+    parser.add_argument("runs", nargs="*", type=Path, help="stability: two judge-*.json files")
     parser.add_argument("--model", default="sonnet")
     parser.add_argument("--tag", default="", help="suffix for the output file, e.g. -adjudicated")
-    args = parser.parse_args()
-    r = calibrate(args.model, args.tag)
-    print(json.dumps({k: v for k, v in r.items() if k != "disagreements"}, indent=1))
+    parser.add_argument("--set", dest="cal_dir", type=Path, default=CAL_DIR)
+    parser.add_argument("--fresh", action="store_true", help="bypass the verdict cache")
+    args = parser.parse_args(argv)
+    if args.command == "stability":
+        if len(args.runs) != 2:
+            parser.error("stability needs exactly two judge-*.json files")
+        a, b = (json.loads(p.read_text(encoding="utf-8")) for p in args.runs)
+        print(json.dumps(stability(a, b), indent=1))
+        return
+    r = calibrate(args.model, args.tag, args.cal_dir, args.fresh)
+    hidden = ("disagreements", "verdicts")
+    print(json.dumps({k: v for k, v in r.items() if k not in hidden}, indent=1))
 
 
 if __name__ == "__main__":

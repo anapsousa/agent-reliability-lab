@@ -41,9 +41,45 @@ Decided before labelling, so the result cannot steer the rule:
   the sonnet judge over all 467 and score it against these 48 labels. If it is higher,
   the repeats' outcome level is partly real and the regex stays.
 
+## Judge reading on the 48 (written 2026-11-24, before any judge call on these items)
+
+The rule above was not met (sonnet 2 of 16 ASSERTED), so the judge is **not** run over the
+467 and the regex stays. This reading does not change that, whatever it returns.
+
+Why run it at all: the judge's recall figure (2 of 8, 25%) rests on eight positives from
+the September baseline, and the same judge gave 1 of 9 the day before. These 48 labels are
+the first the judge has not been scored against, from three newer models. Scoring it on
+them costs 96 short calls on the subscription and no agent run.
+
+Fixed before the run:
+
+1. **The bar does not move:** ASSERTED recall of at least 90%. The sample has 4 positives,
+   so only 4 of 4 would meet it on its face, and 4 of 4 has a 95% Wilson lower bound of
+   51%. **No result on this sample qualifies the judge.** It can fail the bar again or
+   leave it open.
+2. **Two fresh runs**, cache bypassed (`--fresh`), same instructions as on 7 Oct (unchanged
+   in `../stance.py`), effort low, model given by full id (`claude-sonnet-5-5`) and the id
+   Claude Code reports recorded in the output. Files: `judge-claude-sonnet-5-5-run1.json`
+   and `-run2.json`.
+3. **Reported:** ASSERTED recall per run; false alarms on the 43 REFUTED (a REFUTED called
+   ASSERTED or NEUTRAL would fail a correct answer); the number of items whose verdict
+   changes between the two runs, and how many of those cross pass/fail.
+4. **No tuning on these items.** If the instructions are ever changed after reading these
+   verdicts, the 48 become a development set and the bar needs a new blind sample.
+5. **Disagreements go to the owner, not to the judge.** The label sheet here had three
+   options; the judge has four (UNRELATED, added after the baseline's round 1). If the
+   judge and the labels differ on any item in either run, those items, plus every item
+   labelled ASSERTED or NEUTRAL, are put into a blind four-option sheet mixed with twice
+   as many agreed-REFUTED decoys. As in the baseline, an `adjudicated.json` saved here
+   overrides `labels.json` item by item (`stance.load_labels`), the sample report is
+   re-issued, and the 10% rule above is applied once more to the adjudicated labels. The
+   first report stays as it is.
+
 ## Reproduce
 
     uv run python -m evals.judges.stance_repeats count
     uv run python -m evals.judges.stance_repeats build
+    uv run python -m evals.judges.stance calibrate --model claude-sonnet-5-5 \
+        --set evals/judges/stance-repeats-2026-11-07 --fresh --tag -run1
 
 `tests/test_stance_repeats.py` rebuilds the set and checks it byte for byte.
