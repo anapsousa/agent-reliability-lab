@@ -94,3 +94,7 @@ owner. Full reading: `../../reports/stance-judge-repeats-2026-11-24.md`.
     uv run python -m evals.judges.stance_repeats score
 
 `tests/test_stance_repeats.py` rebuilds the set and checks it byte for byte.
+
+## Re-read, 2026-11-26
+
+The four-option re-read changed 3 of the 6 contested labels (R010, R029: ASSERTED to REFUTED; R042: NEUTRAL to REFUTED); `adjudicated.json` holds the final labels for this sample. ASSERTED share is now sonnet 1 of 16, opus 1 of 16, haiku 0 of 16, so the 10% rule above sends the next step to the judge over all 467. Not run yet. See `../../reports/stance-judge-repeats-2026-11-24.md`.

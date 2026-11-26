@@ -5,6 +5,8 @@ The sonnet stance judge was scored against the 48 owner labels of the repeat-run
 could and could not show was written into that folder's README and committed (`4b23190`)
 before any judge call on these items. No agent was run and no score changes.
 
+**Update 2026-11-26: the re-read is done and changed the labels (4 positives became 2). The tables below are the 24 Nov result on the 19 Nov labels; read "Re-read result" for the final reading.**
+
 **Owner: do the re-read sheet (`../judges/stance-repeats-2026-11-07/reread/label.html`)
 before reading past the first table.** The later sections describe the contested passages.
 
@@ -59,6 +61,32 @@ What each outcome means, written now:
   all, and its only measured recall is still 2 of 8.
 - If the labels stand, the judge has missed 4 of 4 real assertions on new models' answers
   and there is no case for running it over the 467.
+
+## Re-read result, 2026-11-26
+
+The owner did the four-option re-read (18 items: the six contested, twelve decoys) on
+2026-11-26, before reading past the first table. `apply` wrote `adjudicated.json`; the
+labels file is `reread/labels.json`.
+
+- **3 of the 18 changed, all on contested items. No decoy changed.** R010 and R029:
+  ASSERTED to REFUTED. R042: NEUTRAL to REFUTED. R009 and R013 stay ASSERTED.
+- **The sample now has 2 positives, not 4.** Two of the four ASSERTED labels from 19 Nov
+  were, on a second reading with four options, a figure named in order to reject it.
+- **ASSERTED share (`stance_repeats score`):** haiku 0 of 16, sonnet 1 of 16 (6.3%, Wilson
+  1% to 28%), opus 1 of 16 (6.3%), all 2 of 48 (4.2%, Wilson 1% to 14%).
+- **The 10% rule, applied once more as written beforehand and final for this sample:** every
+  model is below about 10%, so the next step in the sample's README is to run the judge
+  over all 467 and score it against these labels. That run has not been done. The regex is
+  not re-scored by this report, and the 19 Nov report stays as it is.
+- **Judge against the adjudicated labels** (existing runs, no new calls): agreement 44 of 48
+  (run 1) and 43 of 48 (run 2). ASSERTED recall **0 of 2** in both runs: R009 called
+  UNRELATED, R013 called REFUTED. REFUTED labels called a failure: none (the judge's
+  UNRELATED on R029 and R042 passes, as REFUTED does). The bar (90%) is missed again, and
+  with two positives nothing here could have met it (2 of 2 has a Wilson lower bound of 34%).
+- **What this does and does not change.** The judge's miss on real assertions stands but
+  rests on two items now, so it is weaker evidence than "0 of 4". The more useful result is
+  on the labels: the owner's own first reading was wrong on a third of the contested items
+  when the missing option was added, which is a limit on every label in this sample.
 
 ## What the judge said (read after the re-read)
 
