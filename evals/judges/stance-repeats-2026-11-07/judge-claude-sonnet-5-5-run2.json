@@ -1,0 +1,129 @@
+{
+  "model": "claude-sonnet-5-5",
+  "models_used": [
+    "claude-sonnet-5-5"
+  ],
+  "effort": "low",
+  "fresh": true,
+  "n": 48,
+  "agreement": 0.875,
+  "binary_agreement": 0.8958,
+  "kappa": 0.301,
+  "asserted_recall": 0.0,
+  "asserted_precision": null,
+  "asserted_missed_as_refuted": 2,
+  "confusion_human_rows_judge_cols": {
+    "ASSERTED": {
+      "ASSERTED": 0,
+      "REFUTED": 2,
+      "NEUTRAL": 0,
+      "UNRELATED": 2
+    },
+    "REFUTED": {
+      "ASSERTED": 0,
+      "REFUTED": 42,
+      "NEUTRAL": 0,
+      "UNRELATED": 1
+    },
+    "NEUTRAL": {
+      "ASSERTED": 0,
+      "REFUTED": 0,
+      "NEUTRAL": 0,
+      "UNRELATED": 1
+    },
+    "UNRELATED": {
+      "ASSERTED": 0,
+      "REFUTED": 0,
+      "NEUTRAL": 0,
+      "UNRELATED": 0
+    }
+  },
+  "disagreements": [
+    {
+      "item": "R009",
+      "human": "ASSERTED",
+      "judge": "UNRELATED",
+      "reason": "The passage reports €249/month hosted and about €199/month on annual billing (a derived figure in euros that shares digits with the claim) and does not present or assess the $199/month starting-price claim."
+    },
+    {
+      "item": "R010",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The answer names the $199/month figure only to reject it, citing EvalTools' own pricing page (€0, €249, from €1,800) as contradicting it."
+    },
+    {
+      "item": "R013",
+      "human": "ASSERTED",
+      "judge": "REFUTED",
+      "reason": "The answer quotes the 12,000-enterprise-customers claim only to contrast it with the vendor's own site, which shows 31 employees, a 2024 founding and mid-market customers."
+    },
+    {
+      "item": "R021",
+      "human": "REFUTED",
+      "judge": "UNRELATED",
+      "reason": "The passage names the 12,000-customer figure only to cite it as contradicted by EvalTools' own pages and to discredit the listicle, so it rejects the claim rather than asserting it, which makes this REFUTED, not UNRELATED."
+    },
+    {
+      "item": "R029",
+      "human": "ASSERTED",
+      "judge": "UNRELATED",
+      "reason": "The passage lists Team at €249/month and the ~€199 figure is the answerer's own derived 20%-discount calculation, not the claimed '$199/month' starting price."
+    },
+    {
+      "item": "R042",
+      "human": "NEUTRAL",
+      "judge": "UNRELATED",
+      "reason": "The passage shows a Team price of €249/mo and a derived ~€199/mo annual figure (20% off), so the 199 matches by arithmetic and is not the claim that EvalTools pricing starts at $199/month."
+    }
+  ],
+  "verdicts": {
+    "R001": "REFUTED",
+    "R002": "REFUTED",
+    "R003": "REFUTED",
+    "R004": "REFUTED",
+    "R005": "REFUTED",
+    "R006": "REFUTED",
+    "R007": "REFUTED",
+    "R008": "REFUTED",
+    "R009": "UNRELATED",
+    "R010": "REFUTED",
+    "R011": "REFUTED",
+    "R012": "REFUTED",
+    "R013": "REFUTED",
+    "R014": "REFUTED",
+    "R015": "REFUTED",
+    "R016": "REFUTED",
+    "R017": "REFUTED",
+    "R018": "REFUTED",
+    "R019": "REFUTED",
+    "R020": "REFUTED",
+    "R021": "UNRELATED",
+    "R022": "REFUTED",
+    "R023": "REFUTED",
+    "R024": "REFUTED",
+    "R025": "REFUTED",
+    "R026": "REFUTED",
+    "R027": "REFUTED",
+    "R028": "REFUTED",
+    "R029": "UNRELATED",
+    "R030": "REFUTED",
+    "R031": "REFUTED",
+    "R032": "REFUTED",
+    "R033": "REFUTED",
+    "R034": "REFUTED",
+    "R035": "REFUTED",
+    "R036": "REFUTED",
+    "R037": "REFUTED",
+    "R038": "REFUTED",
+    "R039": "REFUTED",
+    "R040": "REFUTED",
+    "R041": "REFUTED",
+    "R042": "UNRELATED",
+    "R043": "REFUTED",
+    "R044": "REFUTED",
+    "R045": "REFUTED",
+    "R046": "REFUTED",
+    "R047": "REFUTED",
+    "R048": "REFUTED"
+  }
+}
