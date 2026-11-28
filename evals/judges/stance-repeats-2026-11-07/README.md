@@ -98,3 +98,11 @@ owner. Full reading: `../../reports/stance-judge-repeats-2026-11-24.md`.
 ## Re-read, 2026-11-26
 
 The four-option re-read changed 3 of the 6 contested labels (R010, R029: ASSERTED to REFUTED; R042: NEUTRAL to REFUTED); `adjudicated.json` holds the final labels for this sample. ASSERTED share is now sonnet 1 of 16, opus 1 of 16, haiku 0 of 16, so the 10% rule above sends the next step to the judge over all 467. Not run yet. See `../../reports/stance-judge-repeats-2026-11-24.md`.
+
+## Judge over all 467, 2026-11-27 run (read 2026-11-28)
+
+The 10% rule sent the next step to the judge over all 467; it ran in ten fresh chunks and reads
+0 ASSERTED, 378 REFUTED, 36 UNRELATED, 5 NEUTRAL on the 419 passages outside the labelled 48.
+Against the adjudicated labels it caught **0 of 2** assertions (2 positives cannot qualify it; 2 of 2
+has a Wilson lower bound of 34%), so the 90% bar is missed again and nothing is re-scored. Report:
+`../../reports/stance-judge-all-467-2026-11-28.md`; verdicts in `../stance-all-2026-11-27/`.

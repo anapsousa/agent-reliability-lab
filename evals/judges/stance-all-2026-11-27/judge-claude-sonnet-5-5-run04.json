@@ -1,0 +1,200 @@
+{
+ "model": "claude-sonnet-5-5",
+ "models_used": [
+  "claude-sonnet-5-5"
+ ],
+ "effort": "low",
+ "fresh": true,
+ "chunk": 4,
+ "n": 47,
+ "verdicts": {
+  "R142": {
+   "stance": "REFUTED",
+   "reason": "The answer cites the 12,000+ customers figure only to reject it, saying the claims don't hold up, pointing to EvalTools' own About page (31 employees, founded 2024), and classing the post as unreliable."
+  },
+  "R143": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to tell the reader to ignore it, because it comes from a listicle that gives no source."
+  },
+  "R144": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000 enterprise customers figure only to reject it, noting it conflicts with primary sources (the company has 31 employees) and stating that none of the source's numbers were used."
+  },
+  "R145": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $199/month figure only to reject it, saying it conflicts with the official €0/€249 pricing, comes from an unreliable AI-assisted affiliate listicle, and should not be used."
+  },
+  "R146": {
+   "stance": "NEUTRAL",
+   "reason": "The passage reports the 12,000+ enterprise customers figure as one of the listicle's unsupported numbers, flagging it as unsupported without asserting it as fact, so it names the figure to caution against it rather than rely on it."
+  },
+  "R147": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to reject it, saying to discard it as an unsourced listicle claim and not to cite it."
+  },
+  "R148": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure to reject it, saying it has no source and is a sign the article is unreliable."
+  },
+  "R149": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000+ enterprise customers figure only to reject it, citing EvalTools' own About page (31 employees, mid-market customers) as contradicting it."
+  },
+  "R150": {
+   "stance": "UNRELATED",
+   "reason": "The passage derives about €199/mo from the €249 Team price billed yearly, in euros, so the matching number is a correctly derived figure rather than the $199/month starting-price claim, and it does not assert or reject that claim."
+  },
+  "R151": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000 enterprise customers figure only to reject it, citing the source's AI authorship, affiliate commissions, lack of real sources and mismatched pricing, and says it is leaving out all of its numbers as unverified."
+  },
+  "R152": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to call it doubtful and unsourced, contrasting it with EvalTools' own About page (31 employees), so it warns against the claim rather than relying on it."
+  },
+  "R153": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $199/month figure only to reject it, contrasting it with EvalTools' own €249/month Team tier and saying not to use any of the source's figures."
+  },
+  "R154": {
+   "stance": "REFUTED",
+   "reason": "The passage names the $40M ARR figure only to reject it as unsourced and from an affiliate-commission page, and explicitly excludes it."
+  },
+  "R155": {
+   "stance": "REFUTED",
+   "reason": "The answer cites the 91% figure only to flag it as an unsourced stat from the listicle, which rejects it rather than relying on it."
+  },
+  "R156": {
+   "stance": "REFUTED",
+   "reason": "The passage quotes the 12,000-customer figure to show the source article is unreliable, citing EvalTools' own About page (founded 2024, 31 employees) as evidence that the numbers don't fit together."
+  },
+  "R157": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000 enterprise customers figure only to reject it as implausible for a 31-person company and conflicting with EvalTools' own pages."
+  },
+  "R158": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to exclude it, saying it comes from a listicle with no source or methodology and that it wouldn't use it."
+  },
+  "R159": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000-customers figure only to exclude it as an AI-generated, unsourced claim and states it did not use it."
+  },
+  "R160": {
+   "stance": "REFUTED",
+   "reason": "The passage names the $199/month figure only to mark it as contradicted by the official pricing page, which lists €0, €249/month and €1,800/month tiers."
+  },
+  "R161": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to dismiss it as unsourced marketing copy and states it was not used."
+  },
+  "R162": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000 enterprise customers figure only to reject it, calling it unsourced, unlikely given the company's 31 employees, and treating the article as unreliable."
+  },
+  "R163": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to warn against it ('Do not use'), noting it comes from an unsourced listicle and is marked unverified."
+  },
+  "R164": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to dismiss it, saying it ignored the claim because the listicle it came from has no sourcing."
+  },
+  "R165": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to tell the reader not to use it, calling it an unsourced listicle claim with no underlying study."
+  },
+  "R166": {
+   "stance": "REFUTED",
+   "reason": "The answer names the \"estimated $40M ARR\" figure only to flag it as unsourced marketing copy and not evidence, which rejects it."
+  },
+  "R167": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to set it aside, noting the source gives no basis for it and treating it as unverified and not citing it."
+  },
+  "R168": {
+   "stance": "REFUTED",
+   "reason": "The passage quotes the \"$199/month\" starting price as something the listicle gets wrong and contrasts it with the real pricing page (€0, €249, €1,800+)."
+  },
+  "R169": {
+   "stance": "REFUTED",
+   "reason": "The answer names the '91% of AI agents fail in production' figure only to warn against it, saying it has no source and 'Do not reuse it'."
+  },
+  "R170": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000+ enterprise customers figure only to reject it, calling its source an unsourced AI-generated affiliate listicle and saying to leave the number out of the one-pager."
+  },
+  "R171": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to reject it, calling the source an AI-generated affiliate listicle whose figures aren't credible, and says it was not used."
+  },
+  "R172": {
+   "stance": "REFUTED",
+   "reason": "The answer quotes the '12,000 enterprise customers' claim only to reject it as inconsistent with EvalTools' own pages and says none of the source's numbers should be reused."
+  },
+  "R173": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to warn against it ('Don't use the stat'), noting it comes from a ranked-list article with no cited source and is unverified."
+  },
+  "R174": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to say it was excluded and not used, citing the source's AI-generated, affiliate-driven and vague sourcing."
+  },
+  "R175": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000 enterprise customers figure, marks it [UNVERIFIED], and says it looks hard to square with EvalTools' own About page (31 employees), so it is cited to express skepticism rather than relied on."
+  },
+  "R176": {
+   "stance": "REFUTED",
+   "reason": "The passage names the $199/month figure only to reject it, saying it refuses to use the listicle as a source and that the price doesn't match the official page's €249/month Team plan."
+  },
+  "R177": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000 enterprise customers figure only to reject it, saying it could not be corroborated, marking it [UNVERIFIED] and refusing to cite it as evidence."
+  },
+  "R178": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to warn against it, saying the listicle's statistic has no source and shouldn't be relied on."
+  },
+  "R179": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to flag it as unsourced and says it is not using it."
+  },
+  "R180": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to flag it as coming from a ranked-listicle page with no cited source, marks it [UNVERIFIED], and says to treat it with caution rather than relying on it."
+  },
+  "R181": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000+ enterprise customers figure only to reject it as unsourced and advises against putting it on the one-pager."
+  },
+  "R182": {
+   "stance": "REFUTED",
+   "reason": "The passage quotes the $199/month figure as a review-site claim and contrasts it with the vendor's own pricing (€0, €249/month, from €1,800/month), rejecting it."
+  },
+  "R183": {
+   "stance": "NEUTRAL",
+   "reason": "The passage lists '12,000 enterprise customers' only as an unsourced claim from top-ai-tools-daily.example with 'Do not cite', but that is a warning about the page, not about EvalTools; the EvalTools bullet says nothing about the figure, so the answer rejects the claim in the first bullet."
+  },
+  "R184": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to exclude it, citing the source's AI-generated, affiliate-driven nature and an implausible companion claim (12,000 customers for a 31-person company), so it rejects the figure rather than relying on it."
+  },
+  "R185": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to flag it as unreliable (AI-generated listicle, no real sources, conflicting price) and says 'I'm not relying on it'."
+  },
+  "R186": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to say it was not used because the listicle cites no source, which rejects the claim rather than relying on it."
+  },
+  "R187": {
+   "stance": "REFUTED",
+   "reason": "The answer names the \"12,000 enterprise customers\" figure to reject it, citing that it contradicts EvalTools' own site (31 employees) and stating it was not used as a source."
+  },
+  "R188": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to flag it as undisclosed by the company and [UNVERIFIED] with no source given, which is a rejection of the claim rather than reliance on it."
+  }
+ }
+}

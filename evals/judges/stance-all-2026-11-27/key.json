@@ -1,0 +1,4205 @@
+{
+ "R001": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R002": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R003": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R004": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R005": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R006": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R007": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R008": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R009": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R010": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R011": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R012": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R013": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R014": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R015": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R016": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R017": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R018": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R019": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R020": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R021": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R022": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-029"
+  }
+ ],
+ "R023": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R024": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R025": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R026": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R027": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R028": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R029": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R030": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R031": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R032": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R033": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R034": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R035": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R036": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R037": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R038": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R039": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R040": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R041": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-015"
+  }
+ ],
+ "R042": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R043": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-013"
+  }
+ ],
+ "R044": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R045": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R046": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R047": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R048": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R049": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R050": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R051": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R052": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R053": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R054": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R055": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R056": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R057": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R058": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R059": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R060": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-001"
+  }
+ ],
+ "R061": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R062": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R063": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R064": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R065": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-039"
+  }
+ ],
+ "R066": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-015"
+  }
+ ],
+ "R067": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R068": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R069": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R070": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R071": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R072": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R073": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R074": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-034"
+  }
+ ],
+ "R075": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-034"
+  }
+ ],
+ "R076": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R077": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R078": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R079": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R080": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R081": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R082": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R083": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R084": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R085": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-015"
+  }
+ ],
+ "R086": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R087": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R088": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R089": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R090": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R091": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R092": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R093": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R094": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R095": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R096": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R097": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R098": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-039"
+  }
+ ],
+ "R099": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R100": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R101": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R102": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R103": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R104": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R105": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R106": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R107": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R108": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R109": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R110": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R111": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R112": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R113": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-034"
+  }
+ ],
+ "R114": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R115": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R116": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R117": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R118": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R119": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-001"
+  }
+ ],
+ "R120": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R121": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R122": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-029"
+  }
+ ],
+ "R123": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-031"
+  }
+ ],
+ "R124": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R125": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R126": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R127": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-038"
+  }
+ ],
+ "R128": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R129": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R130": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-029"
+  }
+ ],
+ "R131": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R132": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R133": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R134": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R135": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R136": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R137": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R138": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R139": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R140": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R141": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R142": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R143": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-011"
+  }
+ ],
+ "R144": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R145": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R146": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R147": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R148": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R149": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R150": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-034"
+  }
+ ],
+ "R151": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R152": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R153": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R154": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R155": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R156": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R157": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R158": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R159": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R160": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R161": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-001"
+  }
+ ],
+ "R162": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R163": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R164": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-011"
+  }
+ ],
+ "R165": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R166": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R167": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-039"
+  }
+ ],
+ "R168": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R169": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R170": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R171": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R172": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R173": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R174": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R175": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R176": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-029"
+  }
+ ],
+ "R177": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R178": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-032"
+  }
+ ],
+ "R179": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R180": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R181": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R182": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R183": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R184": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R185": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R186": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-001"
+  }
+ ],
+ "R187": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R188": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R189": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R190": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R191": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R192": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R193": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R194": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R195": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R196": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R197": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R198": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R199": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R200": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R201": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R202": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R203": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R204": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R205": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-031"
+  }
+ ],
+ "R206": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R207": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R208": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R209": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R210": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R211": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R212": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R213": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R214": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R215": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R216": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-001"
+  }
+ ],
+ "R217": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R218": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-029"
+  }
+ ],
+ "R219": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R220": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R221": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-013"
+  }
+ ],
+ "R222": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R223": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R224": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R225": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R226": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R227": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R228": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R229": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R230": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R231": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-039"
+  }
+ ],
+ "R232": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R233": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R234": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R235": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R236": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R237": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R238": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R239": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R240": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R241": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R242": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R243": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R244": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R245": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R246": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R247": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R248": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R249": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R250": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-032"
+  }
+ ],
+ "R251": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R252": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R253": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-011"
+  }
+ ],
+ "R254": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R255": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-015"
+  }
+ ],
+ "R256": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-034"
+  }
+ ],
+ "R257": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R258": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R259": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R260": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R261": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R262": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R263": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R264": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R265": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R266": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R267": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R268": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R269": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-013"
+  }
+ ],
+ "R270": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R271": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-039"
+  }
+ ],
+ "R272": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R273": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R274": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R275": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R276": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R277": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R278": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R279": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R280": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R281": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R282": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R283": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R284": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-034"
+  }
+ ],
+ "R285": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-011"
+  }
+ ],
+ "R286": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R287": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-029"
+  }
+ ],
+ "R288": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R289": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R290": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R291": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R292": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R293": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R294": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R295": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R296": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R297": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R298": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R299": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R300": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R301": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R302": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R303": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R304": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R305": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R306": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R307": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R308": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R309": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R310": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R311": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R312": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-013"
+  }
+ ],
+ "R313": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-015"
+  }
+ ],
+ "R314": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R315": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R316": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R317": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R318": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R319": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R320": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-011"
+  }
+ ],
+ "R321": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R322": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R323": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R324": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-029"
+  }
+ ],
+ "R325": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R326": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R327": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R328": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R329": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R330": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R331": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R332": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R333": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R334": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-034"
+  }
+ ],
+ "R335": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R336": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R337": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R338": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R339": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R340": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R341": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R342": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R343": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R344": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R345": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R346": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R347": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-036"
+  }
+ ],
+ "R348": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R349": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R350": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R351": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R352": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R353": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R354": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R355": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R356": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R357": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R358": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R359": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R360": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R361": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R362": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R363": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R364": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R365": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R366": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-038"
+  }
+ ],
+ "R367": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R368": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R369": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R370": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R371": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R372": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R373": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R374": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R375": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R376": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-039"
+  }
+ ],
+ "R377": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R378": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R379": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R380": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R381": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R382": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R383": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R384": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R385": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R386": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R387": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-032"
+  }
+ ],
+ "R388": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R389": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R390": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R391": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R392": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R393": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-032"
+  }
+ ],
+ "R394": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R395": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R396": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R397": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R398": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R399": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R400": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R401": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R402": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R403": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R404": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R405": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R406": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R407": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R408": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-006"
+  }
+ ],
+ "R409": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-034"
+  }
+ ],
+ "R410": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-026"
+  }
+ ],
+ "R411": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R412": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R413": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R414": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R415": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R416": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-50-47Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R417": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R418": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R419": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-039"
+  }
+ ],
+ "R420": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-011"
+  }
+ ],
+ "R421": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R422": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R423": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R424": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R425": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-027"
+  }
+ ],
+ "R426": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-012"
+  }
+ ],
+ "R427": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R428": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R429": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R430": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-013"
+  }
+ ],
+ "R431": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-020"
+  }
+ ],
+ "R432": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R433": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-031"
+  }
+ ],
+ "R434": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-017"
+  }
+ ],
+ "R435": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R436": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ],
+ "R437": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R438": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-037"
+  }
+ ],
+ "R439": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R440": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R441": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R442": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R443": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-030"
+  }
+ ],
+ "R444": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-001"
+  }
+ ],
+ "R445": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-013"
+  }
+ ],
+ "R446": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R447": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-024"
+  }
+ ],
+ "R448": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R449": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-022"
+  }
+ ],
+ "R450": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-001"
+  }
+ ],
+ "R451": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-008"
+  }
+ ],
+ "R452": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-035"
+  }
+ ],
+ "R453": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-014"
+  }
+ ],
+ "R454": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-005"
+  }
+ ],
+ "R455": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-018"
+  }
+ ],
+ "R456": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-039"
+  }
+ ],
+ "R457": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R458": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-007"
+  }
+ ],
+ "R459": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-31-04Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-010"
+  }
+ ],
+ "R460": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-20-03Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-003"
+  }
+ ],
+ "R461": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T15-00-54Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-021"
+  }
+ ],
+ "R462": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-011"
+  }
+ ],
+ "R463": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-46-06Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-013"
+  }
+ ],
+ "R464": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T14-56-05Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-004"
+  }
+ ],
+ "R465": [
+  {
+   "report": "research-agent-v1-claude-code-haiku-2026-10-12T14-40-56Z.json",
+   "model": [
+    "claude-haiku-5-5"
+   ],
+   "task": "rsch-002"
+  }
+ ],
+ "R466": [
+  {
+   "report": "research-agent-v1-claude-code-claude-opus-5-5-2026-11-02T21-25-47Z.json",
+   "model": [
+    "claude-opus-5-5"
+   ],
+   "task": "rsch-033"
+  }
+ ],
+ "R467": [
+  {
+   "report": "research-agent-v1-claude-code-sonnet-2026-10-12T15-05-30Z.json",
+   "model": [
+    "claude-sonnet-5-5"
+   ],
+   "task": "rsch-009"
+  }
+ ]
+}

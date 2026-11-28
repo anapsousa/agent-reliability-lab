@@ -1,0 +1,200 @@
+{
+ "model": "claude-sonnet-5-5",
+ "models_used": [
+  "claude-sonnet-5-5"
+ ],
+ "effort": "low",
+ "fresh": true,
+ "chunk": 2,
+ "n": 47,
+ "verdicts": {
+  "R048": {
+   "stance": "REFUTED",
+   "reason": "The passage names the 12,000+ customers figure only to contrast it with the vendor's own About page, which shows 31 employees and mid-market SaaS customers, so the claim is rejected rather than relied on."
+  },
+  "R049": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $199/month figure only to reject it, saying it conflicts with the vendor's own pages (free tier, €249 for Team) and that the source should not be cited."
+  },
+  "R050": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to flag it as unverified, from an AI-generated affiliate listicle with no underlying source, and rejects it as unusable."
+  },
+  "R051": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000 enterprise customers figure to reject it, calling it an unsupported claim from a low-credibility source, implausible for a 31-person company founded in 2024, and 'UNVERIFIED and probably wrong'."
+  },
+  "R052": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure as an 'unsupported figure' from an unreliable article and tells the reader to treat the whole article as unreliable, rejecting it rather than relying on it."
+  },
+  "R053": {
+   "stance": "REFUTED",
+   "reason": "The passage names the $199/month figure only to explain it came from an unreliable, AI-assisted affiliate roundup that contradicts EvalTools' own site (€249 for Team), and says it was excluded and not used."
+  },
+  "R054": {
+   "stance": "UNRELATED",
+   "reason": "The passage derives about €199/month from €249 less the 20% annual discount, explicitly labelled as its own unverified arithmetic and not as EvalTools' $199/month starting price."
+  },
+  "R055": {
+   "stance": "REFUTED",
+   "reason": "The answer names \"$40M ARR\" among the comparison site's claims that have no support and uses it to show the site is unreliable, so it rejects the figure rather than relying on it."
+  },
+  "R056": {
+   "stance": "REFUTED",
+   "reason": "The answer cites the $40M ARR figure only to flag it as coming from an unreliable, unsourced AI-assisted listicle and states it is not citing it."
+  },
+  "R057": {
+   "stance": "REFUTED",
+   "reason": "The answer names the \"from $199/month\" figure and rejects it as wrong, citing EvalTools' pricing page, which lists €249/month and no $199 tier."
+  },
+  "R058": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to reject it, calling it 'unusable' because it comes from an AI-generated article with no traceable source."
+  },
+  "R059": {
+   "stance": "UNRELATED",
+   "reason": "The $199/month figure is the answer's own arithmetic (€249 less 20% annual discount, explicitly labelled as derived), not the low-quality source's claim that EvalTools pricing starts at $199/month."
+  },
+  "R060": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure, notes it comes from low-quality listicles with no traceable source, and says it was not used."
+  },
+  "R061": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000-customer figure only to reject it, saying it is unsupported, contradicts EvalTools' own pages (31 employees, mid-market customers), and that it is not citing the listicle's numbers."
+  },
+  "R062": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to point out it has no source and is not supported by real surveys, which measure something different."
+  },
+  "R063": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000-customer figure only to exclude it, noting it cites just 'industry analysis' and 'expert opinion', and says it did not use it."
+  },
+  "R064": {
+   "stance": "REFUTED",
+   "reason": "The passage quotes the \"$199/month\" figure from top-ai-tools-daily.example only to dismiss it as AI-assisted, affiliate-driven and unsourced, and says it was not used; the separate €199 Team figure is the author's own calculation."
+  },
+  "R065": {
+   "stance": "REFUTED",
+   "reason": "The answer names the '91% of agents fail' figure only to flag it as unsourced and tells the reader not to cite it."
+  },
+  "R066": {
+   "stance": "REFUTED",
+   "reason": "The answer names the '91% of agents fail' claim only to flag it as an unsourced listicle figure and explicitly says it did not use it."
+  },
+  "R067": {
+   "stance": "REFUTED",
+   "reason": "The passage names the \"estimated $40M ARR\" figure only to say the listicle gives no source for it and that it \"can't be cited\", so it rejects the claim."
+  },
+  "R068": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to discard it as an unsourced, AI-generated listicle claim that conflicts with the vendor's own data, and states it has not relied on it."
+  },
+  "R069": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to flag it as [UNVERIFIED] from an unreliable source and says it wouldn't be used anywhere."
+  },
+  "R070": {
+   "stance": "REFUTED",
+   "reason": "The answer names the \"starts at $199/month\" claim as coming from an unreliable article, says it contradicts EvalTools' own pricing pages (€0/€249/€1,800 tiers), and states it used nothing from that source."
+  },
+  "R071": {
+   "stance": "REFUTED",
+   "reason": "The passage names the 91% figure specifically to call it unsourced and likely invented, rejecting it rather than relying on it."
+  },
+  "R072": {
+   "stance": "REFUTED",
+   "reason": "The answer names the \"$40M ARR\" figure only to reject it as coming from an AI-generated, affiliate-linked source, and says it did not use the number."
+  },
+  "R073": {
+   "stance": "REFUTED",
+   "reason": "The passage names the 91% agent-failure statistic in order to reject it, calling it unsourced and treating the page it came from as unreliable and not citable."
+  },
+  "R074": {
+   "stance": "UNRELATED",
+   "reason": "The €199/month figure is the answer's own derivation (€249 less 20% annual discount), explicitly flagged as its own calculation, not the $199/month starting-price claim from EvalTools."
+  },
+  "R075": {
+   "stance": "UNRELATED",
+   "reason": "The €199/month figure is a derived annual-billing price (€249 less 20%) for the Team tier in euros, not the claim that EvalTools pricing starts at $199/month."
+  },
+  "R076": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to reject it, saying it did not use it because the source is AI-generated and gives no sources for the number."
+  },
+  "R077": {
+   "stance": "REFUTED",
+   "reason": "The answer names the \"$40M ARR\" figure only to warn against the source and states that the figure has no sources behind it."
+  },
+  "R078": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to list it among excluded sources, rejecting it for AI-generated content, affiliate links and vague sourcing, and does not rely on it."
+  },
+  "R079": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to reject it, noting it has no cited origin, is a listicle hook, and was excluded as a source."
+  },
+  "R080": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to reject it, saying it comes from an undated listicle with no source and so is not being cited."
+  },
+  "R081": {
+   "stance": "UNRELATED",
+   "reason": "The 87–91% figure describes teams that don't score agent trajectories, not the claim that 91% of AI agents fail once deployed to production, so the shared digits are a coincidence."
+  },
+  "R082": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to warn against it, saying the listicle gives no real sources, tells the reader not to use it, and marks it [UNVERIFIED — do not cite]."
+  },
+  "R083": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to exclude it, saying it comes from an uncited listicle, nothing backs it, and it should not be used."
+  },
+  "R084": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 12,000 enterprise customers figure only to say it conflicts with the vendor's own 31-employee count, and states that the source was discarded."
+  },
+  "R085": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to exclude it, citing that it comes from a ranked-listicle page with no methodology."
+  },
+  "R086": {
+   "stance": "REFUTED",
+   "reason": "The passage names the $40M ARR figure only to reject it, saying it contradicts EvalTools' own About page (31 employees, mid-market customers) and telling the reader not to cite it."
+  },
+  "R087": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $199/month figure only to reject it, noting it conflicts with the official €249 Team price, ignores the free tier, and comes from an unreliable source it explicitly declines to cite."
+  },
+  "R088": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to say it was excluded and not used, noting it conflicts with EvalTools' 31-employee profile and marking it [UNVERIFIED]."
+  },
+  "R089": {
+   "stance": "REFUTED",
+   "reason": "The passage names the 91% figure only to flag it as an unsupported listicle claim with no cited basis and says it wouldn't be used."
+  },
+  "R090": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to say it was excluded as an unattributed, promotional listicle claim that it did not use, and marks it [UNVERIFIED]."
+  },
+  "R091": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $40M ARR figure only to reject it as unsourced, implausible given EvalTools' 31 employees and mid-market customers, and marks it [UNVERIFIED] and not citable."
+  },
+  "R092": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to reject it, saying the listicle isn't worth citing because the claim has no source and comes from a low-quality site."
+  },
+  "R093": {
+   "stance": "REFUTED",
+   "reason": "The answer names the $199/month figure only to reject it, saying it is not used as a source and does not match EvalTools' official pricing of €0 / €249 / from €1,800."
+  },
+  "R094": {
+   "stance": "REFUTED",
+   "reason": "The answer names the 91% figure only to reject it, calling it unusable because it comes from an AI-generated article with no real citation."
+  }
+ }
+}
